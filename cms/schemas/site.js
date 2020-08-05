@@ -16,6 +16,30 @@ export default {
       type: "string",
       validation: (Rule) => Rule.required(),
     },
+
+    {
+      name: "companies",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          name: "member",
+          fields: [
+            {
+              name: "name",
+              type: "string",
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              type: "image",
+              name: "image",
+              validation: (Rule) => Rule.required(),
+            },
+          ],
+        },
+      ],
+    },
+
     {
       type: "object",
       name: "team",
