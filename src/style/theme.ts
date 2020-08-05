@@ -25,7 +25,7 @@ export const colors = {
   grey: "grey",
 };
 
-export const size = {
+const _scale = {
   xs: ".25rem",
   sm: ".5rem",
   "-2": _msVar(-2),
@@ -46,6 +46,11 @@ export const size = {
   "13": _msVar(13),
   "14": _msVar(14),
   "15": _msVar(15),
+};
+
+export const size = {
+  ..._scale,
+  standard: _scale[4],
 };
 
 const SIZE = 7;

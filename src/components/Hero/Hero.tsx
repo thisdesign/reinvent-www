@@ -1,11 +1,13 @@
 import React from "react";
 import { LargeHead, Support } from "components";
+import S from "./Hero.Styled";
+
 const Hero = () => {
   return (
-    <div>
+    <S.Wrapper>
       <LargeHead>Venture at scale.</LargeHead>
       <Support>Maecenas sed diam eget risus varius blandit sit amet.</Support>
-    </div>
+    </S.Wrapper>
   );
 };
 
