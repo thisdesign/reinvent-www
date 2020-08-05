@@ -23,7 +23,38 @@ const JobTitle = styled.div`
   color: ${colors.grey};
 `;
 
+const TeamMemberBio = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background: ${colors.white};
+  width: 30rem;
+  max-height: 90vh;
+  overflow: scroll;
+  z-index: 200;
+  padding: ${size.standard};
+  border-radius: ${size.sm};
+
+  img {
+    width: 100px;
+  }
+`;
+
+const Shadow = styled.div`
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 0;
+`;
+
 export default {
+  Shadow,
   JobTitle,
+  TeamMemberBio,
   Wrapper,
 };

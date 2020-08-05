@@ -5,8 +5,10 @@ import Nav from "./Nav/Nav";
 import ArrowDown from "./ArrowDown/ArrowDown";
 import ImageBreak from "./ImageBreak/ImageBreak";
 import TeamMembers from "./TeamMembers/TeamMembers";
+import SanityBlockContent from "./SanityBlockContent/SanityBlockContent";
 
 export {
+  SanityBlockContent,
   TeamMembers,
   ImageBreak,
   ArrowDown,
