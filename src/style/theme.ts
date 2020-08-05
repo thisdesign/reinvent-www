@@ -25,6 +25,9 @@ export const colors = {
   grey: "grey",
 };
 
+export const ease = {
+  standard: `cubic-bezier(.36,.7,.51,.97)`,
+};
 const _scale = {
   xs: ".25rem",
   sm: ".5rem",
