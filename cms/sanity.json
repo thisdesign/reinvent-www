@@ -1,11 +1,11 @@
 {
   "root": true,
+  "api": {
+    "projectId": "07nl0hko",
+    "dataset": "production"
+  },
   "project": {
     "name": "lbl-www"
-  },
-  "api": {
-    "projectId": "nm17u3qu",
-    "dataset": "lbl-www"
   },
   "plugins": [
     "@sanity/base",
@@ -16,7 +16,9 @@
   ],
   "env": {
     "development": {
-      "plugins": ["@sanity/vision"]
+      "plugins": [
+        "@sanity/vision"
+      ]
     }
   },
   "parts": [
