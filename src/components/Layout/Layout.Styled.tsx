@@ -1,9 +1,6 @@
 import styled from "styled-components";
-import { fontSizes } from "style";
 
-const Wrapper = styled.div`
-  padding: ${fontSizes.xs};
-`;
+const Wrapper = styled.div``;
 
 const HomeContent = styled.div`
   flex: 1;
