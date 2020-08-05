@@ -9,11 +9,6 @@ const style = css`
 
   body {
     font-family: AxelGrotesk;
-    text-transform: uppercase;
-    font-size: ${fontSizes.sm};
-    line-height: 0.9;
-    color: var(--color-secondary);
-    background: var(--color-primary);
   }
 
   a {
@@ -22,29 +17,9 @@ const style = css`
   }
 `;
 
-const theme = {
-  black: css`
-    :root {
-      --color-primary: ${colors.black};
-      --color-secondary: ${colors.white};
-      --color-highlight: ${colors.yellow};
-    }
-  `,
-
-  yellow: css`
-    :root {
-      --color-primary: ${colors.yellow};
-      --color-secondary: ${colors.black};
-      --color-highlight: ${colors.white};
-    }
-  `,
-};
-
-const GlobalStyle = createGlobalStyle<{ theme: "black" | "yellow" }>`
-  ${(p) => theme[p.theme]};
+const GlobalStyle = createGlobalStyle`
   ${reset}
   ${style}
-  
 `;
 
 export default GlobalStyle;

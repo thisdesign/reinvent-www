@@ -2,16 +2,11 @@ import React from "react";
 import GlobalStyle from "style/GlobalStyle";
 import S from "./Layout.Styled";
 
-const Layout: React.FC<{
-  title: string | null;
-  theme?: "black" | "yellow";
-}> = ({ title, children, theme = "yellow" }) => {
+const Layout: React.FC = ({ children }) => {
   return (
     <div>
-      <GlobalStyle theme={theme} />
-      <S.Wrapper>
-        <div>{children}</div>
-      </S.Wrapper>
+      <GlobalStyle />
+      <main>{children}</main>
     </div>
   );
 };
