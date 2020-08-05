@@ -2,9 +2,12 @@ import styled from "styled-components";
 import { size } from "style";
 
 const Wrapper = styled.nav`
-  padding: 0 ${size.standard};
+  padding: ${size[0]} ${size.standard};
   display: flex;
   justify-content: space-between;
+
+  position: sticky;
+  top: 0;
 `;
 
 const ItemWrap = styled.ul`

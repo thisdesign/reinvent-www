@@ -3,5 +3,6 @@ import { LargeHead, Support } from "./Type/Type";
 import Hero from "./Hero/Hero";
 import Nav from "./Nav/Nav";
 import ArrowDown from "./ArrowDown/ArrowDown";
+import ImageBreak from "./ImageBreak/ImageBreak";
 
-export { ArrowDown, Nav, Support, Hero, Layout, LargeHead };
+export { ImageBreak, ArrowDown, Nav, Support, Hero, Layout, LargeHead };
