@@ -1,8 +1,12 @@
 import { createGlobalStyle, css } from "styled-components";
-import { colors, fontSizes } from "style";
+import { sizeVars } from "style";
 import reset from "styled-reset";
 
 const style = css`
+  :root {
+    ${sizeVars}
+  }
+
   * {
     box-sizing: border-box;
   }
