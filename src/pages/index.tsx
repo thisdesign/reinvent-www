@@ -13,7 +13,7 @@ const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const site = await getSite();
 
   return { props: { site } };
