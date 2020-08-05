@@ -23,7 +23,7 @@ export default {
       of: [
         {
           type: "object",
-          name: "member",
+          name: "company",
           fields: [
             {
               name: "name",
