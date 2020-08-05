@@ -1,5 +1,5 @@
 {
-  "name": "lblwww",
+  "name": "reinvent",
   "private": true,
   "version": "1.0.0",
   "description": "",
@@ -27,7 +27,6 @@
   },
   "devDependencies": {},
   "repository": {
-    "type": "git",
-    "url": "https://github.com/tylermcrobert/lbl-www.git"
+    "type": "git"
   }
 }
