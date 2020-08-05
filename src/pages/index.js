@@ -1,5 +1,9 @@
-import { Layout } from "components";
+import { Layout, Hero } from "components";
 
 export default function Home() {
-  return <Layout>Hello World</Layout>;
+  return (
+    <Layout>
+      <Hero />
+    </Layout>
+  );
 }

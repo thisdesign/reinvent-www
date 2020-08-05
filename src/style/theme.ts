@@ -49,9 +49,3 @@ export const size = {
 };
 
 const SIZE = 7;
-
-export const fontSizes = {
-  xs: `${SIZE / 4}vw`,
-  sm: `${SIZE / 2}vw`,
-  lg: `${SIZE}vw`,
-};
