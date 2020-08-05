@@ -14,7 +14,7 @@ const AnimateIn = keyframes`
 `;
 
 const Wrapper = styled.div`
-  min-height: calc(100vh - 10rem);
+  min-height: calc(100vh - 15rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,6 +28,11 @@ const Wrapper = styled.div`
   }
 `;
 
+const LogoWrap = styled.div`
+  padding: ${size.standard};
+`;
+
 export default {
+  LogoWrap,
   Wrapper,
 };

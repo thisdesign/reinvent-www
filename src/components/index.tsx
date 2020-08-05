@@ -6,8 +6,10 @@ import ArrowDown from "./ArrowDown/ArrowDown";
 import ImageBreak from "./ImageBreak/ImageBreak";
 import TeamMembers from "./TeamMembers/TeamMembers";
 import SanityBlockContent from "./SanityBlockContent/SanityBlockContent";
+import Logo from "./Logo/Logo";
 
 export {
+  Logo,
   SanityBlockContent,
   TeamMembers,
   ImageBreak,
