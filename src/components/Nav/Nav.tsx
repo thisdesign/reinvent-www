@@ -11,7 +11,7 @@ const Nav = () => {
         const { y } = ref.current.getBoundingClientRect();
         const state = y > 0;
 
-        setScrolled(state);
+        setScrolled(!state);
       }
     };
 
@@ -25,10 +25,10 @@ const Nav = () => {
 
   return (
     <S.Wrapper ref={ref}>
-      <S.LogoWrap active={!isScrolled}>
+      <S.LogoWrap active={isScrolled}>
         <ArrowDown />
       </S.LogoWrap>
-      <S.LogoWrap active={isScrolled}>
+      <S.LogoWrap active={!isScrolled}>
         <Logo />
       </S.LogoWrap>
       <div></div>
