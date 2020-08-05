@@ -18,6 +18,7 @@ const style = css`
   html {
     font-family: BasisGrotesque, Helvetica, Arial, sans-serif;
     font-size: 18px;
+    line-height: 1.1;
 
     @media ${mq.xs} {
       font-size: 20px;
