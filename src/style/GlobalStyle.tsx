@@ -8,7 +8,7 @@ const style = css`
   }
 
   body {
-    font-family: AxelGrotesk;
+    font-family: BasisGrotesque;
   }
 
   a {
