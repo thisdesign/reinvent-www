@@ -17,7 +17,7 @@ const ItemWrap = styled.ul`
   display: flex;
 
   li {
-    padding-left: ${size[2]};
+    padding-left: ${size[0]};
   }
 `;
 

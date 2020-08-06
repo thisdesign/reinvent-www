@@ -34,9 +34,15 @@ const Nav = () => {
       <div></div>
 
       <S.ItemWrap>
-        <li>Companies</li>
-        <li>Our Team</li>
-        <li>Contact</li>
+        <li>
+          <a href="#companies">Companies</a>
+        </li>
+        <li>
+          <a href="#team">Our Team</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
       </S.ItemWrap>
     </S.Wrapper>
   );
