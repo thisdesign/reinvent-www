@@ -54,7 +54,36 @@ const ModalInner = styled.div`
   }
 `;
 
+const NavWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-top: ${size.standard};
+
+  > div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    p {
+      margin: 0 ${size.sm};
+    }
+  }
+`;
+
+const ProfileTitleWrap = styled.div`
+  display: flex;
+  margin-bottom: ${size[2]};
+  align-items: center;
+
+  img {
+    margin-right: ${size[0]};
+    border-radius: ${size[-2]};
+  }
+`;
+
 export default {
+  ProfileTitleWrap,
+  NavWrap,
   ModalInner,
   JobTitle,
   ModalOuter,

@@ -2,7 +2,7 @@ import Layout from "./Layout/Layout";
 import { LargeHead, Support, MediumHead, Eyebrow } from "./Type/Type";
 import Hero from "./Hero/Hero";
 import Nav from "./Nav/Nav";
-import ArrowDown from "./ArrowDown/ArrowDown";
+import ArrowDown, { ArrowRight, ArrowLeft } from "./ArrowDown/ArrowDown";
 import ImageBreak from "./ImageBreak/ImageBreak";
 import TeamMembers from "./TeamMembers/TeamMembers";
 import SanityBlockContent from "./SanityBlockContent/SanityBlockContent";
@@ -12,6 +12,8 @@ import Anchor from "./Anchor/Anchor";
 import Companies from "./Companies/Companies";
 
 export {
+  ArrowLeft,
+  ArrowRight,
   Companies,
   Anchor,
   Eyebrow,
