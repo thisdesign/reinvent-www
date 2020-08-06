@@ -26,7 +26,7 @@ export const colors = {
 };
 
 export const ease = {
-  standard: `cubic-bezier(.36,.7,.51,.97)`,
+  standard: `cubic-bezier(.39,.575,.565,1)`,
 };
 const _scale = {
   xs: ".25rem",
@@ -62,4 +62,17 @@ export const zIndex = {
   modalWindow: 70,
 };
 
-const SIZE = 7;
+const DLY = 100;
+const DUR = 600;
+
+export const buildDelays = Array.from({ length: 10 })
+  .map((_, i) => DLY + i * DLY)
+  .map((t) => `${t}ms`);
+
+export const tr = (properties: string[], buildIndex: number) =>
+  properties
+    .map(
+      (property) =>
+        `${DUR}ms ${property} ${ease.standard} ${buildDelays[buildIndex]}`
+    )
+    .join(", ");

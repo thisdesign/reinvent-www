@@ -1,18 +1,7 @@
 import styled, { keyframes } from "styled-components";
-import { size, ease } from "style";
+import { size, tr } from "style";
 import { MediumHead } from "components/Type/Type";
 import mq from "style/mq";
-
-const AnimateIn = keyframes`
-  from {
-    transform: translateY(1rem);
-    opacity: 0
-  } 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
 
 const Wrapper = styled.div`
   min-height: calc(100vh - 13rem);
@@ -22,10 +11,18 @@ const Wrapper = styled.div`
   padding: ${size.standard};
 
   ${MediumHead} {
-    animation: 800ms ${AnimateIn} ${ease.standard};
+    transition: ${tr(["opacity", "transform"], 1)};
     max-width: 100%;
     width: 100%;
     letter-spacing: -0.005em;
+    /* Transitions */
+    transform: translate3d(0, 10%, 0);
+    opacity: 0;
+
+    .mounted & {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
 
     @media ${mq.sm} {
       width: 80%;
@@ -35,6 +32,16 @@ const Wrapper = styled.div`
 
 const LogoWrap = styled.div`
   padding: ${size[2]} ${size.standard};
+  transition: ${tr(["opacity", "transform"], 0)};
+
+  /* Transitions */
+  opacity: 0;
+  transform: translate3d(0, 10%, 0);
+
+  .mounted & {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 `;
 
 export default {

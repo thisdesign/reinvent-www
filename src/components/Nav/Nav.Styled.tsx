@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { size, ease, zIndex } from "style";
+import { size, ease, zIndex, tr } from "style";
 
 const Wrapper = styled.nav<{ active: boolean }>`
   padding: ${size[0]} ${size.standard};
@@ -11,6 +11,16 @@ const Wrapper = styled.nav<{ active: boolean }>`
   display: relative;
   z-index: ${zIndex.nav};
   background: ${(p) => (p.active ? "white" : "transparent")};
+
+  /* Transitions */
+  opacity: 0;
+  transform: translate3d(0, 10%, 0);
+  transition: ${tr(["transform", "opacity"], 2)};
+
+  .mounted & {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 `;
 
 const ItemWrap = styled.ul`
