@@ -17,16 +17,16 @@ const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
       <ImageBreak layout="RIGHT" src={site.introImage} alt={site.title} />
       <TextBlock
         center
-        eyebrow="Team"
-        head="Maecenas sed diam eget"
-        support="Maecenas sed diam eget risus varius blandit sit amet."
+        eyebrow={site.companies.eyebrow}
+        head={site.companies.main}
+        support={site.companies.support}
       />
       <ImageBreak layout="FULL" src={site.imageBreak} alt={site.title} />
       <TextBlock
         center
-        eyebrow="Team"
-        head="Maecenas sed diam eget"
-        support="Maecenas sed diam eget risus varius blandit sit amet."
+        eyebrow={site.team.eyebrow}
+        head={site.team.main}
+        support={site.team.support}
       />
 
       <TeamMembers members={site.team.members} />

@@ -1,6 +1,12 @@
 import { SanityImage, SanitySlug } from "types";
 import { SanityBlockContent } from "./sanity";
 
+export type HeadingPair = {
+  eyebrow: string;
+  main: string;
+  support: string;
+};
+
 export type TeamMember = {
   _key: string;
   _type: string;
@@ -16,12 +22,12 @@ export type SiteSchema = {
   _rev: string;
   _type: string;
   _updatedAt: string;
-  companies: [];
+  companies: { logos: [] } & HeadingPair;
   slug: SanitySlug;
   imageBreak: SanityImage;
   introImage: SanityImage;
   team: {
     members: TeamMember[];
-  };
+  } & HeadingPair;
   title: string;
 };

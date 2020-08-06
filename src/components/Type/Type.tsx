@@ -15,7 +15,7 @@ ${SHARED_PROPS}
 export const MediumHead = styled.h2`
 ${SHARED_PROPS}
   font-size: ${size[4]};
-  line-height: 0.8;
+  line-height: 1.1;
 `;
 
 export const Support = styled.p`
