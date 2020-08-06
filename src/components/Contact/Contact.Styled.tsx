@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { size } from "style";
+import { size, colors } from "style";
 
-const Wrapper = styled.div<{ bg: string }>`
-  background-image: ${(p) => `url(${p.bg})`};
+const Wrapper = styled.div`
+  background-color: ${colors.ltGrey};
   background-position: center;
   background-size: cover;
   padding: calc(${size.standard} * 2);

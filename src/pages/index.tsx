@@ -20,10 +20,8 @@ const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
       <Hero />
       <Nav />
       <Container>
-        <ImageBreak layout="RIGHT" src={site.introImage} alt={site.title} />
         <Anchor id="companies" />
         <Companies data={site.companies} />
-        <ImageBreak layout="FULL" src={site.imageBreak} alt={site.title} />
         <Anchor id="team" />
         <TextBlock
           center

@@ -23,6 +23,7 @@ export const colors = {
   black: "#131212",
   white: "white",
   grey: "grey",
+  ltGrey: "#b5b5b5",
 };
 
 export const ease = {

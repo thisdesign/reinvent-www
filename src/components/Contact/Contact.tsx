@@ -9,14 +9,7 @@ const Contact: React.FC<{ data: ContactSchema; emailAddress: string }> = ({
   emailAddress,
 }) => {
   return (
-    <S.Wrapper
-      bg={urlFor(data.backgroundImage)
-        .width(1700)
-        .auto("format")
-        .format("jpg")
-        .quality(80)
-        .url()}
-    >
+    <S.Wrapper>
       <TextBlock
         margin={false}
         center
