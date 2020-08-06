@@ -7,7 +7,7 @@ const Wrapper = styled.div`
 
   @media ${mq.md} {
     display: grid;
-    grid-template-columns: 30rem auto;
+    grid-template-columns: auto 30rem;
     align-items: center;
     grid-gap: ${size[0]};
   }
@@ -20,12 +20,13 @@ const ImgWrap = styled.div`
   margin: 0 ${size.standard};
 
   @media ${mq.md} {
-    margin-left: 0;
+    margin-right: 0;
   }
 
   img {
     width: 33%;
     opacity: 0.5;
+    transform: scale(1.1);
   }
 `;
 
