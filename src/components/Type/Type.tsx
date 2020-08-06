@@ -21,6 +21,7 @@ export const MediumHead = styled.h3`
 ${SHARED_PROPS}
   font-size: ${size[4]};
   line-height: 1.1;
+  max-width:10em;
 `;
 
 export const Support = styled.p`
