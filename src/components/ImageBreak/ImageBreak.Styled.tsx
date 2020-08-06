@@ -10,7 +10,7 @@ const Wrapper = styled.div<{ layout: Layout }>`
   /* Transitions */
   opacity: 0;
   transform: translate3d(0, 1rem, 0);
-  transition: ${tr(["transform", "opacity"], 2)};
+  transition: ${tr(["transform", "opacity"], 3)};
 
   .mounted & {
     opacity: 1;
