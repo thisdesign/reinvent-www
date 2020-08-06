@@ -7,6 +7,7 @@ import {
   TeamMembers,
   Anchor,
   Companies,
+  Contact,
 } from "components";
 import { getSite } from "lib/api";
 import { SiteSchema } from "types";
@@ -29,6 +30,7 @@ const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
       />
       <TeamMembers members={site.team.members} />
       <Anchor id="contact" />
+      <Contact data={site.contact} />
     </Layout>
   );
 };

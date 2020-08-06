@@ -24,6 +24,11 @@ export type CompaniesSchema = {
   }[];
 } & HeadingPair;
 
+export type ContactSchema = {
+  backgroundImage: SanityImage;
+  ctaText: string;
+} & HeadingPair;
+
 export type SiteSchema = {
   _createdAt: string;
   _id: string;
@@ -31,6 +36,7 @@ export type SiteSchema = {
   _type: string;
   _updatedAt: string;
   companies: CompaniesSchema;
+  contact: ContactSchema;
   slug: SanitySlug;
   imageBreak: SanityImage;
   introImage: SanityImage;

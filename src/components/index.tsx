@@ -10,8 +10,10 @@ import Logo from "./Logo/Logo";
 import TextBlock from "./TextBlock/Text";
 import Anchor from "./Anchor/Anchor";
 import Companies from "./Companies/Companies";
+import Contact from "./Contact/Contact";
 
 export {
+  Contact,
   ArrowLeft,
   ArrowRight,
   Companies,

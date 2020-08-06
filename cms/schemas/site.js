@@ -7,11 +7,13 @@ const headingPair = [
     name: "main",
     type: "text",
     rows: 2,
+    validation: (Rule) => Rule.required(),
   },
   {
     name: "support",
     type: "text",
     rows: 2,
+    validation: (Rule) => Rule.required(),
   },
 ];
 
@@ -30,6 +32,12 @@ export default {
     {
       name: "title",
       title: "Site Title",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    },
+
+    {
+      name: "contactEmail",
       type: "string",
       validation: (Rule) => Rule.required(),
     },
@@ -119,6 +127,28 @@ export default {
               ],
             },
           ],
+        },
+      ],
+    },
+
+    {
+      type: "object",
+      name: "contact",
+      fields: [
+        ...headingPair,
+
+        {
+          name: "ctaText",
+          type: "string",
+          validation: (Rule) => Rule.required(),
+        },
+        {
+          name: "backgroundImage",
+          type: "image",
+          validation: (Rule) => Rule.required(),
+          options: {
+            hotspot: true,
+          },
         },
       ],
     },
