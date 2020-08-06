@@ -7,9 +7,10 @@ const TextBlock: React.FC<{
   head: string;
   support: string;
   center?: boolean;
-}> = ({ eyebrow, head, support, center }) => {
+  margin?: boolean;
+}> = ({ eyebrow, head, support, center, margin = true }) => {
   return (
-    <S.TextWrap>
+    <S.TextWrap margin={margin}>
       {eyebrow && <Eyebrow center={center}>{eyebrow}</Eyebrow>}
       <MediumHead center={center}>{head}</MediumHead>
       <Support center={center}>{support}</Support>

@@ -30,7 +30,7 @@ const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
       />
       <TeamMembers members={site.team.members} />
       <Anchor id="contact" />
-      <Contact data={site.contact} />
+      <Contact data={site.contact} emailAddress={site.contactEmail} />
     </Layout>
   );
 };

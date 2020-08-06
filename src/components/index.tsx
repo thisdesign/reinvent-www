@@ -11,8 +11,10 @@ import TextBlock from "./TextBlock/Text";
 import Anchor from "./Anchor/Anchor";
 import Companies from "./Companies/Companies";
 import Contact from "./Contact/Contact";
+import AnchorButton from "./AnchorButton/AnchorButton";
 
 export {
+  AnchorButton,
   Contact,
   ArrowLeft,
   ArrowRight,
