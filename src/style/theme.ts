@@ -53,7 +53,7 @@ const _scale = {
 
 export const size = {
   ..._scale,
-  standard: _scale[4],
+  standard: `var(--size-standard)`,
 };
 
 const SIZE = 7;

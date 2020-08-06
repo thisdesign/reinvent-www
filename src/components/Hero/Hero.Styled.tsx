@@ -14,7 +14,7 @@ const AnimateIn = keyframes`
 `;
 
 const Wrapper = styled.div`
-  min-height: calc(100vh - 15rem);
+  min-height: calc(100vh - 18rem);
   display: flex;
   flex-direction: column;
   justify-content: center;

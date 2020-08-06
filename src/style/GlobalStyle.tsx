@@ -1,11 +1,22 @@
 import { createGlobalStyle, css } from "styled-components";
-import { sizeVars } from "style";
+import { sizeVars, size } from "style";
 import reset from "styled-reset";
 import mq from "style/mq";
 
 const style = css`
   :root {
     ${sizeVars}
+    --size-standard: ${size[1]};
+
+    @media ${mq.xs} {
+      --size-standard: ${size[2]};
+    }
+     @media ${mq.sm} {
+      --size-standard: ${size[3]};
+    }
+    @media ${mq.md} {
+      --size-standard: ${size[4]};
+    }
   }
 
   * {
