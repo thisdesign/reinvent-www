@@ -49,5 +49,6 @@ export const Eyebrow = styled.h2`
   ${SHARED_PROPS}
   color: ${colors.grey};
   font-size:${size[0]};
+  margin-bottom: 0;
 
 `;

@@ -5,6 +5,7 @@ import {
   Nav,
   ImageBreak,
   TeamMembers,
+  Anchor,
 } from "components";
 import { getSite } from "lib/api";
 import { SiteSchema } from "types";
@@ -15,7 +16,7 @@ const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
       <Hero />
       <Nav />
       <ImageBreak layout="RIGHT" src={site.introImage} alt={site.title} />
-      <div id="companies" />
+      <Anchor id="companies" />
       <TextBlock
         center
         eyebrow={site.companies.eyebrow}
@@ -23,7 +24,7 @@ const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
         support={site.companies.support}
       />
       <ImageBreak layout="FULL" src={site.imageBreak} alt={site.title} />
-      <div id="team" />
+      <Anchor id="team" />
       <TextBlock
         center
         eyebrow={site.team.eyebrow}
@@ -31,7 +32,7 @@ const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
         support={site.team.support}
       />
       <TeamMembers members={site.team.members} />
-      <div id="contact" />
+      <Anchor id="contact" />
     </Layout>
   );
 };
