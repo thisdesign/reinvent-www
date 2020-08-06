@@ -14,11 +14,11 @@ const SHARED_PROPS = css<HeadingProps>`
 
 export const LargeHead = styled.h1`
 ${SHARED_PROPS}
-  font-size: ${size[5]};
+  font-size: ${size[4]};
   line-height: 0.8;
 
   @media ${mq.sm}{
-  font-size: ${size[6]};
+  font-size: ${size[5]};
 }
 `;
 
