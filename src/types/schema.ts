@@ -22,7 +22,9 @@ export type SiteSchema = {
   _rev: string;
   _type: string;
   _updatedAt: string;
-  companies: { logos: [] } & HeadingPair;
+  companies: {
+    logos: { _key: string; image: SanityImage; name: string }[];
+  } & HeadingPair;
   slug: SanitySlug;
   imageBreak: SanityImage;
   introImage: SanityImage;

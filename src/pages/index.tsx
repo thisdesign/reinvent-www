@@ -9,6 +9,7 @@ import {
 } from "components";
 import { getSite } from "lib/api";
 import { SiteSchema } from "types";
+import { urlFor } from "lib/sanity";
 
 const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
   return (
@@ -23,6 +24,13 @@ const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
         head={site.companies.main}
         support={site.companies.support}
       />
+      {site.companies.logos.map((company) => (
+        <img
+          key={company._key}
+          src={urlFor(company.image).width(100).url()}
+          alt={company.name}
+        />
+      ))}
       <ImageBreak layout="FULL" src={site.imageBreak} alt={site.title} />
       <Anchor id="team" />
       <TextBlock
