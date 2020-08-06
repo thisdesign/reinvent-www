@@ -18,6 +18,15 @@ export default {
     },
 
     {
+      name: "introImage",
+      type: "image",
+      validation: (Rule) => Rule.required(),
+      options: {
+        hotspot: true,
+      },
+    },
+
+    {
       name: "companies",
       type: "array",
       of: [
@@ -38,6 +47,15 @@ export default {
           ],
         },
       ],
+    },
+
+    {
+      name: "imageBreak",
+      type: "image",
+      validation: (Rule) => Rule.required(),
+      options: {
+        hotspot: true,
+      },
     },
 
     {
