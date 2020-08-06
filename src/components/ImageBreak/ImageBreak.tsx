@@ -12,7 +12,7 @@ const useZoom = () => {
     const handleScroll = () => {
       if (ref.current && imgRef.current) {
         const { bottom } = ref.current.getBoundingClientRect();
-        const scaleFactor = bottom / 3000 + 1;
+        const scaleFactor = bottom / 4000 + 1;
 
         imgRef.current.style.transform = `scale(${
           scaleFactor < 1 ? 1 : scaleFactor
