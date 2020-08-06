@@ -1,3 +1,20 @@
+const headingPair = [
+  {
+    name: "eyebrow",
+    type: "string",
+  },
+  {
+    name: "main",
+    type: "text",
+    rows: 2,
+  },
+  {
+    name: "support",
+    type: "text",
+    rows: 2,
+  },
+];
+
 export default {
   name: "site",
   title: "Site Settings",
@@ -27,22 +44,30 @@ export default {
     },
 
     {
+      type: "object",
       name: "companies",
-      type: "array",
-      of: [
+
+      fields: [
+        ...headingPair,
         {
-          type: "object",
-          name: "company",
-          fields: [
+          name: "logos",
+          type: "array",
+          of: [
             {
-              name: "name",
-              type: "string",
-              validation: (Rule) => Rule.required(),
-            },
-            {
-              type: "image",
-              name: "image",
-              validation: (Rule) => Rule.required(),
+              type: "object",
+              name: "company",
+              fields: [
+                {
+                  name: "name",
+                  type: "string",
+                  validation: (Rule) => Rule.required(),
+                },
+                {
+                  type: "image",
+                  name: "image",
+                  validation: (Rule) => Rule.required(),
+                },
+              ],
             },
           ],
         },
@@ -62,6 +87,7 @@ export default {
       type: "object",
       name: "team",
       fields: [
+        ...headingPair,
         {
           name: "members",
           type: "array",
