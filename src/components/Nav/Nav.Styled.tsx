@@ -14,7 +14,7 @@ const Wrapper = styled.nav<{ active: boolean }>`
 
   /* Transitions */
   opacity: 0;
-  transform: translate3d(0, 10%, 0);
+  transform: translate3d(0, 1rem 0);
   transition: ${tr(["transform", "opacity"], 2)};
 
   .mounted & {
