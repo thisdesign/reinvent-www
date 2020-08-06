@@ -20,6 +20,7 @@ const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
       <Hero />
       <Nav />
       <Container>
+        <video autoPlay muted loop playsInline src="/animation.mp4" />
         <Anchor id="companies" />
         <Companies data={site.companies} />
         <Anchor id="team" />

@@ -3,7 +3,7 @@ import { sizeVars, size, colors } from "style";
 import reset from "styled-reset";
 import mq from "style/mq";
 
-const style = css`
+const vars = css`
   :root {
     ${sizeVars}
     --size-standard: ${size[1]};
@@ -18,7 +18,9 @@ const style = css`
       --size-standard: ${size[4]};
     }
   }
+`;
 
+const style = css`
   * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -54,9 +56,16 @@ const style = css`
     text-decoration: none;
     color: inherit;
   }
+
+  img,
+  video {
+    width: 100%;
+    max-width: 100%;
+  }
 `;
 
 const GlobalStyle = createGlobalStyle`
+  ${vars}
   ${reset}
   ${style}
 `;
