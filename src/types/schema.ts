@@ -18,6 +18,8 @@ export type SiteSchema = {
   _updatedAt: string;
   companies: [];
   slug: SanitySlug;
+  imageBreak: SanityImage;
+  introImage: SanityImage;
   team: {
     members: TeamMember[];
   };

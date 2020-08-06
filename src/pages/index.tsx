@@ -14,13 +14,21 @@ const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
     <Layout>
       <Hero />
       <Nav />
-      <ImageBreak />
+      <ImageBreak layout="RIGHT" src={site.introImage} alt={site.title} />
       <TextBlock
         center
         eyebrow="Team"
         head="Maecenas sed diam eget"
         support="Maecenas sed diam eget risus varius blandit sit amet."
       />
+      <ImageBreak layout="FULL" src={site.imageBreak} alt={site.title} />
+      <TextBlock
+        center
+        eyebrow="Team"
+        head="Maecenas sed diam eget"
+        support="Maecenas sed diam eget risus varius blandit sit amet."
+      />
+
       <TeamMembers members={site.team.members} />
     </Layout>
   );
