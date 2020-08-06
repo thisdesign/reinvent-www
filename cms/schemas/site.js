@@ -45,6 +45,7 @@ export default {
     {
       name: "introImage",
       type: "image",
+      hidden: true,
       validation: (Rule) => Rule.required(),
       options: {
         hotspot: true,
@@ -85,10 +86,8 @@ export default {
     {
       name: "imageBreak",
       type: "image",
+      hidden: true,
       validation: (Rule) => Rule.required(),
-      options: {
-        hotspot: true,
-      },
     },
 
     {
@@ -145,6 +144,7 @@ export default {
         {
           name: "backgroundImage",
           type: "image",
+          hidden: true,
           validation: (Rule) => Rule.required(),
           options: {
             hotspot: true,
