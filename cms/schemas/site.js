@@ -43,6 +43,19 @@ export default {
     },
 
     {
+      name: "url",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    },
+
+    {
+      name: "intro",
+      type: "text",
+      rows: 2,
+      validation: (Rule) => Rule.required(),
+    },
+
+    {
       name: "introImage",
       type: "image",
       hidden: true,

@@ -35,6 +35,8 @@ export type SiteSchema = {
   _rev: string;
   _type: string;
   _updatedAt: string;
+  url: string;
+  intro: string;
   contactEmail: string;
   companies: CompaniesSchema;
   contact: ContactSchema;

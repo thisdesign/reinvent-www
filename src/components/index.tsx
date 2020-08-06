@@ -14,8 +14,10 @@ import Contact from "./Contact/Contact";
 import AnchorButton from "./AnchorButton/AnchorButton";
 import Footer from "./Footer/Footer";
 import Container from "./Container/Container";
+import Seo from "./Seo/Seo";
 
 export {
+  Seo,
   Container,
   Footer,
   AnchorButton,
