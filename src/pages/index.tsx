@@ -36,9 +36,15 @@ const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
 };
 
 export const getStaticProps = async () => {
-  const site = await getSite();
+  const getDataFromCms = async () => {
+    const site = await getSite();
+    return { site };
+  };
 
-  return { props: { site } };
+  return {
+    props: await getDataFromCms(),
+    revalidate: 1,
+  };
 };
 
 export default Home;
