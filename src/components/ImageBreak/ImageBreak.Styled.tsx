@@ -7,9 +7,14 @@ const Wrapper = styled.div<{ layout: Layout }>`
   justify-content: ${(p) => (p.layout === "RIGHT" ? "flex-end" : "flex-start")};
   margin: ${size.standard} 0;
 
+  div {
+    overflow: hidden;
+    width: ${(p) => (p.layout === "FULL" ? "100%" : "80%")};
+  }
+
   img {
     display: block;
-    width: ${(p) => (p.layout === "FULL" ? "100%" : "80%")};
+    width: 100%;
   }
 `;
 
