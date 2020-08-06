@@ -32,18 +32,20 @@ const MemberModal: React.FC<{
   closeModal: () => void;
 }> = ({ data, closeModal }) => {
   if (!data) return null;
+
   return (
-    <>
-      <S.TeamMemberBio>
+    <S.ModalOuter onClick={closeModal}>
+      <S.ModalInner onClick={(e) => e.stopPropagation()}>
         <div>
-          <MediumHead>{data.name}</MediumHead>
-          <Support>{data.jobTitle}</Support>
+          <div>
+            <MediumHead>{data.name}</MediumHead>
+            <Support>{data.jobTitle}</Support>
+          </div>
+          <img src={urlFor(data.image).width(900).quality(60).url()} />
+          <SanityBlockContent blocks={data.bio} />
         </div>
-        <img src={urlFor(data.image).width(900).quality(60).url()} />
-        <SanityBlockContent blocks={data.bio} />
-      </S.TeamMemberBio>
-      <S.Shadow onClick={closeModal} />
-    </>
+      </S.ModalInner>
+    </S.ModalOuter>
   );
 };
 
