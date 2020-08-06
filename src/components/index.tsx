@@ -12,8 +12,12 @@ import Anchor from "./Anchor/Anchor";
 import Companies from "./Companies/Companies";
 import Contact from "./Contact/Contact";
 import AnchorButton from "./AnchorButton/AnchorButton";
+import Footer from "./Footer/Footer";
+import Container from "./Container/Container";
 
 export {
+  Container,
+  Footer,
   AnchorButton,
   Contact,
   ArrowLeft,

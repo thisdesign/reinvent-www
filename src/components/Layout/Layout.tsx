@@ -8,10 +8,10 @@ const Layout: React.FC = ({ children }) => {
     setMount(true);
   }, []);
   return (
-    <S.Wrapper className={isMounted ? "mounted" : ""}>
+    <div className={isMounted ? "mounted" : ""}>
       <GlobalStyle />
       <main>{children}</main>
-    </S.Wrapper>
+    </div>
   );
 };
 
