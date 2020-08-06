@@ -3,7 +3,7 @@ import { size } from "style";
 import mq from "style/mq";
 
 const Wrapper = styled.div`
-  min-height: 80vh;
+  min-height: 70vh;
 
   @media ${mq.md} {
     display: grid;
