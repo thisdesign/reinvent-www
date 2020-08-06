@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 
   img {
     width: 100%;
-    border-radius: ${size[2]};
+    border-radius: ${size[0]};
     display: block;
     margin-bottom: ${size[0]};
   }
