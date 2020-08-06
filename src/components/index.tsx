@@ -9,8 +9,10 @@ import SanityBlockContent from "./SanityBlockContent/SanityBlockContent";
 import Logo from "./Logo/Logo";
 import TextBlock from "./TextBlock/Text";
 import Anchor from "./Anchor/Anchor";
+import Companies from "./Companies/Companies";
 
 export {
+  Companies,
   Anchor,
   Eyebrow,
   TextBlock,

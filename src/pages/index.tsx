@@ -6,10 +6,10 @@ import {
   ImageBreak,
   TeamMembers,
   Anchor,
+  Companies,
 } from "components";
 import { getSite } from "lib/api";
 import { SiteSchema } from "types";
-import { urlFor } from "lib/sanity";
 
 const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
   return (
@@ -18,19 +18,7 @@ const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
       <Nav />
       <ImageBreak layout="RIGHT" src={site.introImage} alt={site.title} />
       <Anchor id="companies" />
-      <TextBlock
-        center
-        eyebrow={site.companies.eyebrow}
-        head={site.companies.main}
-        support={site.companies.support}
-      />
-      {site.companies.logos.map((company) => (
-        <img
-          key={company._key}
-          src={urlFor(company.image).width(100).url()}
-          alt={company.name}
-        />
-      ))}
+      <Companies data={site.companies} />
       <ImageBreak layout="FULL" src={site.imageBreak} alt={site.title} />
       <Anchor id="team" />
       <TextBlock

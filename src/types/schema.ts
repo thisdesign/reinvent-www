@@ -16,15 +16,21 @@ export type TeamMember = {
   name: string;
 };
 
+export type CompaniesSchema = {
+  logos: {
+    _key: string;
+    image: SanityImage;
+    name: string;
+  }[];
+} & HeadingPair;
+
 export type SiteSchema = {
   _createdAt: string;
   _id: string;
   _rev: string;
   _type: string;
   _updatedAt: string;
-  companies: {
-    logos: { _key: string; image: SanityImage; name: string }[];
-  } & HeadingPair;
+  companies: CompaniesSchema;
   slug: SanitySlug;
   imageBreak: SanityImage;
   introImage: SanityImage;
