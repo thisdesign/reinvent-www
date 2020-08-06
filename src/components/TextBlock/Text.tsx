@@ -1,5 +1,5 @@
 import React from "react";
-import { MediumHead, Support } from "components";
+import { MediumHead, Support, Eyebrow } from "components";
 import S from "./TextBlock.Styled";
 
 const TextBlock: React.FC<{
@@ -9,10 +9,10 @@ const TextBlock: React.FC<{
   center?: boolean;
 }> = ({ eyebrow, head, support, center }) => {
   return (
-    <S.TextWrap center={center}>
-      {eyebrow && <p>{eyebrow}</p>}
-      <MediumHead>{head}</MediumHead>
-      <Support>{support}</Support>
+    <S.TextWrap>
+      {eyebrow && <Eyebrow center={center}>{eyebrow}</Eyebrow>}
+      <MediumHead center={center}>{head}</MediumHead>
+      <Support center={center}>{support}</Support>
     </S.TextWrap>
   );
 };

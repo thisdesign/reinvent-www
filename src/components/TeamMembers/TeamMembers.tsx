@@ -3,6 +3,7 @@ import { TeamMember } from "types";
 import { urlFor } from "lib/sanity";
 import S from "./TeamMembers.Styled";
 import { SanityBlockContent } from "components";
+import { MediumHead, Support } from "components/Type/Type";
 
 const TeamMembers: React.FC<{ members: TeamMember[] }> = ({ members }) => {
   const [currentKey, setCurrentKey] = useState<string | null>(null);
@@ -34,6 +35,10 @@ const MemberModal: React.FC<{
   return (
     <>
       <S.TeamMemberBio>
+        <div>
+          <MediumHead>{data.name}</MediumHead>
+          <Support>{data.jobTitle}</Support>
+        </div>
         <img src={urlFor(data.image).width(900).quality(60).url()} />
         <SanityBlockContent blocks={data.bio} />
       </S.TeamMemberBio>

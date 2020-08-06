@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { size } from "style";
 
-const TextWrap = styled.div<{ center: boolean }>`
-  text-align: ${(p) => (p.center ? "center" : "left")};
+const TextWrap = styled.div`
   margin: ${size[6]} ${size.standard};
 
   > * {

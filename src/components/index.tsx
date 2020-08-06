@@ -1,5 +1,5 @@
 import Layout from "./Layout/Layout";
-import { LargeHead, Support, MediumHead } from "./Type/Type";
+import { LargeHead, Support, MediumHead, Eyebrow } from "./Type/Type";
 import Hero from "./Hero/Hero";
 import Nav from "./Nav/Nav";
 import ArrowDown from "./ArrowDown/ArrowDown";
@@ -10,6 +10,7 @@ import Logo from "./Logo/Logo";
 import TextBlock from "./TextBlock/Text";
 
 export {
+  Eyebrow,
   TextBlock,
   MediumHead,
   Logo,
