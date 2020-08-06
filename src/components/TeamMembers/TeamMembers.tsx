@@ -66,6 +66,7 @@ const MemberModal: React.FC<{
           </S.ProfileTitleWrap>
           <SanityBlockContent blocks={currentMember.bio} />
         </div>
+        <S.Close onClick={closeModal}>×</S.Close>
         <S.NavWrap>
           <div onClick={() => setcurrentIndex(prevIndex)}>
             <ArrowLeft />

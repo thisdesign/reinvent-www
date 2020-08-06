@@ -54,6 +54,16 @@ const ModalInner = styled.div`
   }
 `;
 
+const Close = styled.div`
+  font-size: ${size[2]};
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: ${size[-1]} ${size[0]};
+  color: ${colors.grey};
+  cursor: pointer;
+`;
+
 const NavWrap = styled.div`
   display: flex;
   justify-content: space-between;
@@ -82,6 +92,7 @@ const ProfileTitleWrap = styled.div`
 `;
 
 export default {
+  Close,
   ProfileTitleWrap,
   NavWrap,
   ModalInner,
