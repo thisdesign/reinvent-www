@@ -24,7 +24,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <S.Wrapper ref={ref}>
+    <S.Wrapper ref={ref} active={isScrolled}>
       <S.LogoWrap active={isScrolled}>
         <ArrowDown />
       </S.LogoWrap>

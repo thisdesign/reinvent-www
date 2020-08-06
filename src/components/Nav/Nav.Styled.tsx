@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { size, ease } from "style";
 
-const Wrapper = styled.nav`
+const Wrapper = styled.nav<{ active: boolean }>`
   padding: ${size[0]} ${size.standard};
   display: flex;
   justify-content: space-between;
@@ -9,6 +9,8 @@ const Wrapper = styled.nav`
   position: sticky;
   top: 0;
   display: relative;
+  z-index: 99;
+  background: ${(p) => (p.active ? "white" : "transparent")};
 `;
 
 const ItemWrap = styled.ul`
