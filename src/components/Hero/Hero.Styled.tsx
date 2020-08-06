@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { size, ease } from "style";
-import { LargeHead, Support } from "components/Type/Type";
+import { MediumHead } from "components/Type/Type";
+import mq from "style/mq";
 
 const AnimateIn = keyframes`
   from {
@@ -14,22 +15,26 @@ const AnimateIn = keyframes`
 `;
 
 const Wrapper = styled.div`
-  min-height: calc(100vh - 15rem);
+  min-height: calc(100vh - 13rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: ${size.standard};
 
-  ${LargeHead} {
+  ${MediumHead} {
     animation: 800ms ${AnimateIn} ${ease.standard};
-  }
-  ${Support} {
-    animation: 1200ms ${AnimateIn} ${ease.standard};
+    max-width: 100%;
+    width: 100%;
+    letter-spacing: -0.005em;
+
+    @media ${mq.sm} {
+      width: 80%;
+    }
   }
 `;
 
 const LogoWrap = styled.div`
-  padding: ${size.standard};
+  padding: ${size[2]} ${size.standard};
 `;
 
 export default {
