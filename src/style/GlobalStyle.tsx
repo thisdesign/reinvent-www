@@ -1,5 +1,5 @@
 import { createGlobalStyle, css } from "styled-components";
-import { sizeVars, size } from "style";
+import { sizeVars, size, colors } from "style";
 import reset from "styled-reset";
 import mq from "style/mq";
 
@@ -29,6 +29,7 @@ const style = css`
   html {
     scroll-behavior: smooth;
     font-family: BasisGrotesque, Helvetica, Arial, sans-serif;
+    color: ${colors.black};
     font-size: 18px;
     line-height: 1.1;
 

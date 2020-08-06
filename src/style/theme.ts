@@ -20,7 +20,7 @@ export const sizeVars = _sizes
  */
 
 export const colors = {
-  black: "black",
+  black: "#131212",
   white: "white",
   grey: "grey",
 };
