@@ -4,7 +4,7 @@ import { size, colors, zIndex } from "style";
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10%;
+  grid-gap: ${size[4]};
   margin: ${size.standard};
 
   img {
