@@ -17,9 +17,9 @@ import { SiteSchema } from "types";
 const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
   return (
     <Layout>
+      <Hero />
+      <Nav />
       <Container>
-        <Hero />
-        <Nav />
         <ImageBreak layout="RIGHT" src={site.introImage} alt={site.title} />
         <Anchor id="companies" />
         <Companies data={site.companies} />

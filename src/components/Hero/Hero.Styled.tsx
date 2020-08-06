@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 
   ${MediumHead} {
     transition: ${tr(["opacity", "transform"], 1)};
-    max-width: 100%;
+    max-width: 20em;
     width: 100%;
     letter-spacing: -0.005em;
     /* Transitions */
