@@ -13,7 +13,20 @@ const Footer: React.FC<{ data: SiteSchema }> = ({ data }) => {
           <div>
             &copy; {new Date().getFullYear()} {data.title}
           </div>
-          <div>Reinvent Capital is not open to new investors.</div>
+          <S.BottomWrap>
+            <div>Reinvent Capital is not open to new investors.</div>
+            <ul>
+              <li>
+                <a href="#companies">Companies</a>
+              </li>
+              <li>
+                <a href="#team">Our Team</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </S.BottomWrap>
         </S.Inner>
       </Container>
     </S.Wrapper>

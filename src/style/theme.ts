@@ -54,6 +54,7 @@ const _scale = {
 export const size = {
   ..._scale,
   standard: `var(--size-standard)`,
+  standardY: `var(--ms4)`,
 };
 
 export const zIndex = {
