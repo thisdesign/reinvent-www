@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { size, ease } from "style";
+import { size, ease, zIndex } from "style";
 
 const Wrapper = styled.nav<{ active: boolean }>`
   padding: ${size[0]} ${size.standard};
@@ -9,7 +9,7 @@ const Wrapper = styled.nav<{ active: boolean }>`
   position: sticky;
   top: 0;
   display: relative;
-  z-index: 99;
+  z-index: ${zIndex.nav};
   background: ${(p) => (p.active ? "white" : "transparent")};
 `;
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { size, colors } from "style";
+import { size, colors, zIndex } from "style";
 
 const Wrapper = styled.div`
   display: grid;
@@ -32,7 +32,7 @@ const TeamMemberBio = styled.div`
   width: 30rem;
   max-height: 90vh;
   overflow: scroll;
-  z-index: 200;
+  z-index: ${zIndex.modalWindow};
   padding: ${size.standard};
   border-radius: ${size.sm};
 
@@ -49,7 +49,7 @@ const Shadow = styled.div`
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.25);
-  z-index: 0;
+  z-index: ${zIndex.modalShadow};
 `;
 
 export default {

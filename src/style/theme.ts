@@ -56,4 +56,10 @@ export const size = {
   standard: `var(--size-standard)`,
 };
 
+export const zIndex = {
+  nav: 50,
+  modalShadow: 60,
+  modalWindow: 70,
+};
+
 const SIZE = 7;
