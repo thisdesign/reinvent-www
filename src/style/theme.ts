@@ -22,8 +22,8 @@ export const sizeVars = _sizes
 export const colors = {
   black: "#000",
   white: "white",
-  grey: "#889698",
-  ltGrey: "#c1c6ce",
+  grey: "grey",
+  ltGrey: "#b9b9b9",
   blue: "#0062ff",
 };
 
