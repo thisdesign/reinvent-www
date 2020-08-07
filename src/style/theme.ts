@@ -20,10 +20,11 @@ export const sizeVars = _sizes
  */
 
 export const colors = {
-  black: "#131212",
+  black: "#000",
   white: "white",
-  grey: "grey",
-  ltGrey: "#b5b5b5",
+  grey: "#889698",
+  ltGrey: "#c1c6ce",
+  blue: "#0062ff",
 };
 
 export const ease = {
