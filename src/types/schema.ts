@@ -3,8 +3,8 @@ import { SanityBlockContent } from "./sanity";
 
 export type HeadingPair = {
   eyebrow: string;
-  main: string;
-  support: string;
+  main?: string;
+  support?: string;
 };
 
 export type TeamMember = {

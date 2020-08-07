@@ -12,8 +12,8 @@ const TextBlock: React.FC<{
   return (
     <S.TextWrap margin={margin}>
       {eyebrow && <Eyebrow center={center}>{eyebrow}</Eyebrow>}
-      <MediumHead center={center}>{head}</MediumHead>
-      <Support center={center}>{support}</Support>
+      {head && <MediumHead center={center}>{head}</MediumHead>}
+      {support && <Support center={center}>{support}</Support>}
     </S.TextWrap>
   );
 };

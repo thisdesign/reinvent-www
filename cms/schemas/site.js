@@ -1,19 +1,21 @@
 const headingPair = [
   {
+    title: "Section Title",
     name: "eyebrow",
     type: "string",
+    validation: (Rule) => Rule.required(),
   },
   {
     name: "main",
     type: "text",
     rows: 2,
-    validation: (Rule) => Rule.required(),
+    // validation: (Rule) => Rule.required(),
   },
   {
     name: "support",
     type: "text",
     rows: 2,
-    validation: (Rule) => Rule.required(),
+    // validation: (Rule) => Rule.required(),
   },
 ];
 
