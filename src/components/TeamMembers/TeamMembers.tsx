@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { TeamMember } from "types";
 import { urlFor } from "lib/sanity";
 import S from "./TeamMembers.Styled";
@@ -11,6 +11,7 @@ import {
 } from "components";
 
 import { inc, dec } from "../../util";
+import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
 const TeamMembers: React.FC<{ members: TeamMember[] }> = ({ members }) => {
   const [currentIndex, setcurrentIndex] = useState<number | null>(null);
@@ -45,6 +46,16 @@ const MemberModal: React.FC<{
   closeModal: () => void;
   setcurrentIndex: (index: number) => void;
 }> = ({ currentIndex, members, closeModal, setcurrentIndex }) => {
+  useEffect(() => {
+    const targetEl = document.querySelector("#modal-outer");
+
+    if (currentIndex === null) {
+      clearAllBodyScrollLocks();
+    } else {
+      disableBodyScroll(targetEl);
+    }
+  }, [currentIndex]);
+
   if (currentIndex === null) return null;
 
   const nextIndex = inc(currentIndex, members.length);
@@ -52,7 +63,7 @@ const MemberModal: React.FC<{
   const currentMember = members[currentIndex];
 
   return (
-    <S.ModalOuter onClick={closeModal}>
+    <S.ModalOuter onClick={closeModal} id="modal-outer">
       <S.ModalInner onClick={(e) => e.stopPropagation()}>
         <div>
           <S.ProfileTitleWrap>
