@@ -3,7 +3,6 @@ const headingPair = [
     title: "Section Title",
     name: "eyebrow",
     type: "string",
-    validation: (Rule) => Rule.required(),
   },
   {
     name: "main",
