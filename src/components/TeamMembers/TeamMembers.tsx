@@ -56,6 +56,20 @@ const MemberModal: React.FC<{
     }
   }, [currentIndex]);
 
+  // esc key listener
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.keyCode === 27) {
+        closeModal();
+      }
+    };
+
+    document.addEventListener("keydown", handleKey, false);
+    return () => {
+      document.removeEventListener("keydown", handleKey, false);
+    };
+  }, []);
+
   if (currentIndex === null) return null;
 
   const nextIndex = inc(currentIndex, members.length);
