@@ -5,7 +5,7 @@ const TextWrap = styled.div<{ margin: boolean }>`
   ${(p) =>
     p.margin &&
     css`
-      margin: ${size[6]} ${size.standard};
+      margin: ${size[6]} ${size.standard} ${size[2]};
     `}
 
   > * {

@@ -7,6 +7,7 @@ const Companies: React.FC<{ data: CompaniesSchema }> = ({ data }) => {
   return (
     <S.Wrapper>
       <TextBlock
+        center
         eyebrow={data.eyebrow}
         head={data.main}
         support={data.support}
