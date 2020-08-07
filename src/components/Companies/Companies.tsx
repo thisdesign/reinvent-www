@@ -6,6 +6,11 @@ import S from "./Companies.Styled";
 const Companies: React.FC<{ data: CompaniesSchema }> = ({ data }) => {
   return (
     <S.Wrapper>
+      <TextBlock
+        eyebrow={data.eyebrow}
+        head={data.main}
+        support={data.support}
+      />
       <S.ImgWrap>
         {data.logos.map((company) => (
           <img
@@ -15,11 +20,6 @@ const Companies: React.FC<{ data: CompaniesSchema }> = ({ data }) => {
           />
         ))}
       </S.ImgWrap>
-      <TextBlock
-        eyebrow={data.eyebrow}
-        head={data.main}
-        support={data.support}
-      />
     </S.Wrapper>
   );
 };

@@ -4,7 +4,7 @@ import { MediumHead } from "components/Type/Type";
 import mq from "style/mq";
 
 const Wrapper = styled.div`
-  min-height: calc(100vh - 13rem);
+  min-height: calc(100vh - 8rem);
   display: flex;
   flex-direction: column;
   justify-content: center;

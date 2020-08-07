@@ -6,8 +6,14 @@ const Wrapper = styled.div`
   min-height: 70vh;
 
   @media ${mq.md} {
-    display: grid;
-    grid-template-columns: auto 30rem;
+    display: flex;
+
+    > * {
+      &:first-child {
+        flex-basis: 55rem;
+      }
+    }
+    flex-direction: row-reverse;
     align-items: center;
     grid-gap: ${size[0]};
   }
@@ -18,6 +24,7 @@ const ImgWrap = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 ${size.standard};
+  width: 100%;
 
   @media ${mq.md} {
     margin-right: 0;
