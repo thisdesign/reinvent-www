@@ -31,6 +31,10 @@ const ItemWrap = styled.ul`
 
   li {
     padding-left: ${size[0]};
+
+    @media ${mq.sm} {
+      padding-left: ${size[2]};
+    }
   }
 `;
 
