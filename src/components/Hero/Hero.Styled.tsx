@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { size, tr } from "style";
+import { size, tr, colors } from "style";
 import { MediumHead } from "components/Type/Type";
 import mq from "style/mq";
 
@@ -9,6 +9,12 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: ${size.standard};
+
+  svg {
+    * {
+      fill: ${colors.blue};
+    }
+  }
 
   ${MediumHead} {
     transition: ${tr(["opacity", "transform"], 1)};

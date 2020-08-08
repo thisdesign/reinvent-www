@@ -24,12 +24,14 @@ export const colors = {
   white: "white",
   grey: "grey",
   ltGrey: "#b9b9b9",
-  blue: "#0062ff",
+  blue: "#6ABDF3",
+  ltBlue: "#8BD1FF",
 };
 
 export const ease = {
   standard: `cubic-bezier(.39,.575,.565,1)`,
 };
+
 const _scale = {
   xs: ".25rem",
   sm: ".5rem",

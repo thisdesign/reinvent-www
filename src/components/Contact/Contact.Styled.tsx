@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { size, colors } from "style";
 
 const Wrapper = styled.div`
-  background-color: ${colors.ltGrey};
+  background-color: ${colors.ltBlue};
   background-position: center;
   background-size: cover;
   padding: calc(${size.standard} * 2);

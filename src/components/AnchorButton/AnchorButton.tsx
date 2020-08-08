@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { colors, size } from "style";
 
 const AnchorButton = styled.a<{ light?: boolean }>`
-  padding: ${size[-1]} ${size[4]};
+  padding: ${size.sm} ${size[2]};
   border-radius: 999999px;
   background: ${colors.black};
 

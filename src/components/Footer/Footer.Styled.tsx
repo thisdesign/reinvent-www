@@ -3,8 +3,8 @@ import { colors, size } from "style";
 import mq from "style/mq";
 
 const Wrapper = styled.div`
-  background: ${colors.black};
-  color: ${colors.grey};
+  background: ${colors.blue};
+  color: ${colors.white};
 
   svg {
     height: ${size[2]};
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
     margin-bottom: ${size[8]};
 
     * {
-      fill: white;
+      fill: ${colors.white};
     }
   }
 `;

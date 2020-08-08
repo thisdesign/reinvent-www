@@ -15,6 +15,7 @@ const Footer: React.FC<{ data: SiteSchema }> = ({ data }) => {
           </div>
           <S.BottomWrap>
             <div>Reinvent Capital is not open to new investors.</div>
+            <div>{data.contactEmail}</div>
             <ul>
               <li>
                 <a href="#companies">Companies</a>
