@@ -6,9 +6,6 @@ import Logo from "components/Logo/Logo";
 const Hero: React.FC<{ text: string }> = ({ text }) => {
   return (
     <>
-      <S.LogoWrap>
-        <Logo />
-      </S.LogoWrap>
       <S.Wrapper>
         <MediumHead as="h1">{text}</MediumHead>
       </S.Wrapper>

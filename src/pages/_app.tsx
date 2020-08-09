@@ -1,11 +1,14 @@
 import { getSite } from "lib/api";
-import { Seo, Layout, Footer } from "components";
-
+import { Seo, Layout, Footer, Logo } from "components";
+import S from "../components/Hero/Hero.Styled";
 function MyApp({ Component, pageProps, site }) {
   return (
     <>
       <Seo title={site.title} url={site.url} description={site.intro} />
       <Layout>
+        <S.LogoWrap>
+          <Logo />
+        </S.LogoWrap>
         <Component {...pageProps} />
         <style jsx global>
           {`
