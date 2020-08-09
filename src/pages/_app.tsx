@@ -7,7 +7,9 @@ function MyApp({ Component, pageProps, site }) {
       <Seo title={site.title} url={site.url} description={site.intro} />
       <Layout>
         <S.LogoWrap>
-          <Logo />
+          <a href="/">
+            <Logo />
+          </a>
         </S.LogoWrap>
         <Component {...pageProps} />
         <style jsx global>

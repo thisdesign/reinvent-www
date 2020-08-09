@@ -14,7 +14,10 @@ const Footer: React.FC<{ data: SiteSchema }> = ({ data }) => {
             &copy; {new Date().getFullYear()} {data.title}
           </div>
           <S.BottomWrap>
-            <div>Reinvent Capital is not open to new investors.</div>
+            <div>
+              <div>Reinvent Capital is not open to new investors.</div>
+              <div>{data.contactEmail}</div>
+            </div>
             <ul>
               <li>
                 <a href="#companies">Companies</a>
@@ -24,6 +27,9 @@ const Footer: React.FC<{ data: SiteSchema }> = ({ data }) => {
               </li>
               <li>
                 <a href="#contact">Contact</a>
+              </li>
+              <li>
+                <a href="/terms">Terms</a>
               </li>
             </ul>
           </S.BottomWrap>
