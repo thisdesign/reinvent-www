@@ -166,5 +166,10 @@ export default {
         },
       ],
     },
+    {
+      name: "terms",
+      title: "Terms of Service",
+      type: "richTextStandard",
+    },
   ],
 };
