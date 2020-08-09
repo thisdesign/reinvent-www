@@ -15,8 +15,10 @@ import AnchorButton from "./AnchorButton/AnchorButton";
 import Footer from "./Footer/Footer";
 import Container from "./Container/Container";
 import Seo from "./Seo/Seo";
+import Terms from "./Terms/Terms";
 
 export {
+  Terms,
   Seo,
   Container,
   Footer,

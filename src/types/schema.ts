@@ -47,4 +47,5 @@ export type SiteSchema = {
     members: TeamMember[];
   } & HeadingPair;
   title: string;
+  terms: SanityBlockContent;
 };

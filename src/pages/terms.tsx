@@ -1,8 +1,12 @@
 import { getSite } from "lib/api";
 import { SiteSchema } from "types";
-
-const Terms: React.FC<{ site: SiteSchema }> = ({ site }) => {
-  return <div>asdfasdfasdf</div>;
+import { Terms } from "components";
+const TermsPage: React.FC<{ site: SiteSchema }> = ({ site }) => {
+  return (
+    <div>
+      <Terms data={site.terms} />
+    </div>
+  );
 };
 
 export const getStaticProps = async () => {
@@ -17,4 +21,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default Terms;
+export default TermsPage;
