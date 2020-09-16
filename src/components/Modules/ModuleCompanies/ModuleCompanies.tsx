@@ -14,6 +14,7 @@ const Companies: React.FC<{ data: ModuleCompanies }> = ({ data }) => {
             alt={company.name}
           />
         ))}
+        {/* TODO: add hoverstate here */}
       </S.ImgWrap>
     </S.Wrapper>
   );
