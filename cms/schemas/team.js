@@ -35,4 +35,11 @@ export default {
       ],
     },
   ],
+  preview: {
+    prepare: (selection) => ({
+      ...selection,
+      title: "Team Members",
+      subtitle: "Headshot, name, title, and bios of team",
+    }),
+  },
 };

@@ -26,4 +26,11 @@ export default {
       ],
     },
   ],
+  preview: {
+    prepare: (selection) => ({
+      ...selection,
+      title: "Companies",
+      subtitle: "A grid of logos",
+    }),
+  },
 };
