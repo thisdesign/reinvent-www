@@ -2,13 +2,7 @@ import React, { useState, useEffect } from "react";
 import { TeamMember } from "types";
 import { urlFor } from "lib/sanity";
 import S from "./TeamMembers.Styled";
-import {
-  SanityBlockContent,
-  ArrowLeft,
-  ArrowRight,
-  MediumHead,
-  Support,
-} from "components";
+import { SanityBlockContent, ArrowLeft, ArrowRight } from "components";
 
 import { inc, dec } from "../../util";
 import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
@@ -68,7 +62,7 @@ const MemberModal: React.FC<{
     return () => {
       document.removeEventListener("keydown", handleKey, false);
     };
-  }, []);
+  }, [closeModal]);
 
   if (currentIndex === null) return null;
 

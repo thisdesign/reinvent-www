@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { size, tr, colors } from "style";
 import { MediumHead } from "components/Type/Type";
 import mq from "style/mq";

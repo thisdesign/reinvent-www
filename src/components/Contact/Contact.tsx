@@ -2,7 +2,6 @@ import React from "react";
 import { ContactSchema } from "types";
 import { TextBlock, AnchorButton } from "components";
 import S from "./Contact.Styled";
-import { urlFor } from "lib/sanity";
 
 const Contact: React.FC<{ data: ContactSchema; emailAddress: string }> = ({
   data,

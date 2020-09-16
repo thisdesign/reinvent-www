@@ -1,16 +1,12 @@
 import {
   TextBlock,
-  Layout,
   Hero,
   Nav,
-  ImageBreak,
   TeamMembers,
   Anchor,
   Companies,
   Contact,
-  Footer,
   Container,
-  Seo,
 } from "components";
 import { getSite } from "lib/api";
 import { SiteSchema } from "types";

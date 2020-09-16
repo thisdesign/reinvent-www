@@ -1,7 +1,6 @@
 import React from "react";
 import { MediumHead } from "components";
 import S from "./Hero.Styled";
-import Logo from "components/Logo/Logo";
 
 const Hero: React.FC<{ text: string }> = ({ text }) => {
   return (

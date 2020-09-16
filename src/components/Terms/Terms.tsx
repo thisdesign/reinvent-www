@@ -1,6 +1,6 @@
 import React from "react";
 import S from "./Terms.Styled";
-import { Container, SanityBlockContent, LargeHead } from "components";
+import { Container, SanityBlockContent } from "components";
 import { SanityBlockContent as SanityBlockContentType } from "types";
 import { MediumHead } from "components/Type/Type";
 
