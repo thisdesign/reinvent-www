@@ -27,6 +27,7 @@ export default {
       of: [
         //
         { type: "team" },
+        { type: "companies" },
       ],
     },
   ],
