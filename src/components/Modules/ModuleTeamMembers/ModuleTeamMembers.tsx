@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { TeamMember } from "types";
+import { ModuleTeam, TeamMember } from "types";
 import { urlFor } from "lib/sanity";
-import S from "./TeamMembers.Styled";
+import S from "./ModuleTeamMembers.Styled";
 import { SanityBlockContent, ArrowLeft, ArrowRight } from "components";
-
-import { inc, dec } from "../../util";
+import { inc, dec } from "../../../util";
 import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
-const TeamMembers: React.FC<{ members: TeamMember[] }> = ({ members }) => {
+const TeamMembers: React.FC<{ data: ModuleTeam }> = ({ data }) => {
   const [currentIndex, setcurrentIndex] = useState<number | null>(null);
 
   const closeModal = () => setcurrentIndex(null);
@@ -15,7 +14,7 @@ const TeamMembers: React.FC<{ members: TeamMember[] }> = ({ members }) => {
   return (
     <>
       <S.Wrapper as="ul">
-        {members.map((member, i) => (
+        {data.members.map((member, i) => (
           <li key={member._key} onClick={() => setcurrentIndex(i)}>
             <img src={urlFor(member.image).width(900).quality(60).url()} />
             <h4>{member.name}</h4>
@@ -26,7 +25,7 @@ const TeamMembers: React.FC<{ members: TeamMember[] }> = ({ members }) => {
       <MemberModal
         key={currentIndex}
         closeModal={closeModal}
-        members={members}
+        members={data.members}
         currentIndex={currentIndex}
         setcurrentIndex={setcurrentIndex}
       />

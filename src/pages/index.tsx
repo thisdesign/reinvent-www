@@ -1,23 +1,12 @@
-import {
-  TextBlock,
-  Hero,
-  Nav,
-  TeamMembers,
-  Anchor,
-  Companies,
-  Contact,
-  Container,
-} from "components";
 import { getSite } from "lib/api";
-import client from "lib/sanity";
 import { SiteSchema } from "types";
 
-const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
+const Home: React.FC<{ site: SiteSchema }> = () => {
   // console.log(JSON.stringify(site.com));
 
   return (
     <>
-      <Hero text={site.intro} />
+      {/* <Hero text={site.intro} />
       <Nav />
       <Container>
         <Anchor id="companies" />
@@ -32,7 +21,7 @@ const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
         <TeamMembers members={site.team.members} />
         <Anchor id="contact" />
       </Container>
-      <Contact data={site.contact} emailAddress={site.contactEmail} />
+      <Contact data={site.contact} emailAddress={site.contactEmail} /> */}
     </>
   );
 };
