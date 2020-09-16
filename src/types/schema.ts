@@ -49,3 +49,9 @@ export type SiteSchema = {
   title: string;
   terms: SanityBlockContent;
 };
+
+export type PageSchema = {
+  title: string;
+  slug: SanitySlug;
+  modules: [];
+};

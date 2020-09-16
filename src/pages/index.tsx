@@ -9,9 +9,12 @@ import {
   Container,
 } from "components";
 import { getSite } from "lib/api";
+import client from "lib/sanity";
 import { SiteSchema } from "types";
 
 const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
+  // console.log(JSON.stringify(site.com));
+
   return (
     <>
       <Hero text={site.intro} />
