@@ -1,11 +1,22 @@
 import { getSite } from "lib/api";
 import { Seo, Layout, Footer, Logo } from "components";
 import S from "../components/Hero/Hero.Styled";
+import Link from "next/link";
+
 function MyApp({ Component, pageProps, site }) {
   return (
     <>
       <Seo title={site.title} url={site.url} description={site.intro} />
       <Layout>
+        {site.primaryNav.map((navItem) => (
+          <Link
+            key={navItem.title}
+            href="/[slug]"
+            as={`/${navItem.slug.current}`}
+          >
+            <a>{navItem.title}</a>
+          </Link>
+        ))}
         <S.LogoWrap>
           <a href="/">
             <Logo />

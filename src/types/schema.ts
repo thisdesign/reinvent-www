@@ -35,6 +35,7 @@ export type SiteSchema = {
   _rev: string;
   _type: string;
   _updatedAt: string;
+  primaryNav: { slug: SanitySlug; title: string }[];
   url: string;
   intro: string;
   contactEmail: string;
@@ -53,7 +54,7 @@ export type SiteSchema = {
 export type PageSchema = {
   title: string;
   slug: SanitySlug;
-  modules: Module[];
+  modules?: Module[];
 };
 
 export type Module = ModuleTeam | ModuleCompanies;
