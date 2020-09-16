@@ -1,23 +1,3 @@
-const headingPair = [
-  {
-    title: "Section Title",
-    name: "eyebrow",
-    type: "string",
-  },
-  {
-    name: "main",
-    type: "text",
-    rows: 2,
-    // validation: (Rule) => Rule.required(),
-  },
-  {
-    name: "support",
-    type: "text",
-    rows: 2,
-    // validation: (Rule) => Rule.required(),
-  },
-];
-
 export default {
   name: "site",
   title: "Site Settings",
@@ -50,6 +30,17 @@ export default {
     },
 
     {
+      name: "primaryNav",
+      type: "array",
+      of: [
+        {
+          type: "reference",
+          to: { type: "page" },
+        },
+      ],
+    },
+
+    {
       name: "intro",
       type: "text",
       rows: 2,
@@ -57,45 +48,19 @@ export default {
     },
 
     {
-      name: "introImage",
-      type: "image",
-      hidden: true,
-      validation: (Rule) => Rule.required(),
-      options: {
-        hotspot: true,
-      },
-    },
-
-    { type: "companies", name: "companies" },
-
-    {
-      name: "imageBreak",
-      type: "image",
-      hidden: true,
-      validation: (Rule) => Rule.required(),
-    },
-
-    { type: "team", name: "team" },
-
-    {
       type: "object",
       name: "contact",
       fields: [
-        ...headingPair,
+        {
+          title: "Section Title",
+          name: "eyebrow",
+          type: "string",
+        },
 
         {
           name: "ctaText",
           type: "string",
           validation: (Rule) => Rule.required(),
-        },
-        {
-          name: "backgroundImage",
-          type: "image",
-          hidden: true,
-          validation: (Rule) => Rule.required(),
-          options: {
-            hotspot: true,
-          },
         },
       ],
     },
