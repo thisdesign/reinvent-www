@@ -3,13 +3,19 @@ import { GetStaticProps, NextPage } from "next";
 import React from "react";
 import { PageSchema } from "types";
 import Error from "next/error";
+import { Modules } from "components";
 
 const PageTemplate: NextPage<{ data: PageSchema }> = ({ data }) => {
   if (!data) {
     return <Error statusCode={404} />;
   }
 
-  return <div>{data.title}</div>;
+  return (
+    <>
+      {data.title}
+      <Modules data={data.modules} />
+    </>
+  );
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {

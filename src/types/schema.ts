@@ -53,5 +53,23 @@ export type SiteSchema = {
 export type PageSchema = {
   title: string;
   slug: SanitySlug;
-  modules: [];
+  modules: Module[];
+};
+
+export type Module = ModuleTeam | ModuleCompanies;
+
+export type ModuleTeam = {
+  _type: "team";
+  _key: string;
+  members: TeamMember[];
+};
+
+export type ModuleCompanies = {
+  _type: "companies";
+  _key: string;
+  logos: {
+    _key: string;
+    image: SanityImage;
+    name: string;
+  }[];
 };

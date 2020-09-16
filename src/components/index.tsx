@@ -16,8 +16,12 @@ import Footer from "./Footer/Footer";
 import Container from "./Container/Container";
 import Seo from "./Seo/Seo";
 import Terms from "./Terms/Terms";
+import Modules from "./Modules/Modules";
+import ModuleCompanies from "./ModuleCompanies/ModuleCompanies";
 
 export {
+  ModuleCompanies,
+  Modules,
   Terms,
   Seo,
   Container,
