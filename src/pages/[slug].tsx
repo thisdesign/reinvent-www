@@ -33,7 +33,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths: paths.map((path) => `/${path.slug.current}`),
-    fallback: true,
+    fallback: false,
   };
 };
 
