@@ -45,8 +45,6 @@ export const ease = {
 };
 
 const _scale = {
-  xs: ".25rem",
-  sm: ".5rem",
   "-2": _msVar(-2),
   "-1": _msVar(-1),
   "0": _msVar(0),
@@ -69,7 +67,9 @@ const _scale = {
 
 export const size = {
   ..._scale,
-  navHeight: "3rem",
+  xs: ".25rem",
+  sm: ".5rem",
+  navHeight: "3.5rem",
   maxWidth: "1400px",
   standard: `var(--size-standard)`,
   standardY: `var(--ms4)`,

@@ -14,7 +14,7 @@ const Inner = styled.div`
   justify-content: space-between;
   height: ${size.navHeight};
   align-items: center;
-  padding: ${size.standard};
+  padding: 0 ${size.standard};
 `;
 
 const Links = styled.div``;

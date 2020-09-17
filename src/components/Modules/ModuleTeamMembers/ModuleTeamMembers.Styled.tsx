@@ -3,10 +3,12 @@ import { size, colors, zIndex } from "style";
 import mq from "style/mq";
 
 const Wrapper = styled.div`
+  max-width: ${size.maxWidth};
+  margin: ${size.standardY} auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: ${size.standard};
-  margin: ${size.standardY} ${size.standard};
+  padding: 0 ${size.standard};
 
   @media ${mq.sm} {
     grid-template-columns: 1fr 1fr 1fr;

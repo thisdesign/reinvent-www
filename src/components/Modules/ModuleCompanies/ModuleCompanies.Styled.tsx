@@ -9,6 +9,8 @@ const ImgWrap = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   padding: 0 ${size.standard};
+  max-width: ${size.maxWidth};
+  margin: 0 auto;
   width: 100%;
 
   img {
