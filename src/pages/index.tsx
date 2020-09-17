@@ -5,7 +5,7 @@ import { PageSchema } from "types";
 
 const Home: React.FC<{ data: PageSchema }> = ({ data }) => {
   return (
-    <Layout slug="about">
+    <Layout slug="about" title={null} route="/" image={null} description={null}>
       <Modules data={data.modules || []} />
     </Layout>
   );

@@ -16,7 +16,6 @@ function MyApp({ Component, pageProps, site }) {
   return (
     <AppCtx.Provider value={{ site }}>
       {/* TODO: move this to layout component */}
-      <Seo title={site.title} url={site.url} description={site.intro} />
       <Component {...pageProps} />
       <style jsx global>
         {`

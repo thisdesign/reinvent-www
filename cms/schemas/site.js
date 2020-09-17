@@ -30,6 +30,20 @@ export default {
     },
 
     {
+      name: "previewImage",
+      type: "image",
+      description:
+        "Image that shows when shared on iMessage, twitter, slack, etc.",
+    },
+
+    {
+      name: "metaDescription",
+      type: "text",
+      description:
+        "The meta description is a snippet of up to about 155 characters which summarizes a page's content for SEO purposes",
+    },
+
+    {
       name: "primaryNav",
       type: "array",
       of: [
@@ -40,30 +54,6 @@ export default {
       ],
     },
 
-    {
-      name: "intro",
-      type: "text",
-      rows: 2,
-      validation: (Rule) => Rule.required(),
-    },
-
-    {
-      type: "object",
-      name: "contact",
-      fields: [
-        {
-          title: "Section Title",
-          name: "eyebrow",
-          type: "string",
-        },
-
-        {
-          name: "ctaText",
-          type: "string",
-          validation: (Rule) => Rule.required(),
-        },
-      ],
-    },
     {
       name: "terms",
       title: "Terms of Service",

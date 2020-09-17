@@ -6,7 +6,7 @@ import S from "./ModuleAbout.Styled";
 
 const ModuleAbout: React.FC<{ data: ModuleAboutType }> = ({ data }) => {
   return (
-    <S.About id="#about">
+    <S.About id="about">
       <S.ImageWrap>
         {data.featuredImage && (
           <img

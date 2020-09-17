@@ -10,7 +10,14 @@ const PageTemplate: NextPage<{ data: PageSchema; slug: string }> = ({
   slug,
 }) => {
   return (
-    <Layout slug={slug}>
+    <Layout
+      slug={slug}
+      title={data.title}
+      route={`/${slug}`}
+      image={null}
+      description={null}
+    >
+      {" "}
       {data ? (
         <>
           {/* TODO: add seo to this */}

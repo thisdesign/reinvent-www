@@ -49,6 +49,8 @@ export type SiteSchema = {
   } & HeadingPair;
   title: string;
   terms: SanityBlockContent;
+  previewImage: SanityImage;
+  metaDescription: string;
 };
 
 export type PageSchema = {
