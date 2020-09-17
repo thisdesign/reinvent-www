@@ -3,7 +3,7 @@ import { size } from "style";
 
 const Intro = styled.div`
   max-width: ${size.maxWidth};
-  padding: ${size.standardY} ${size.standard};
+  padding: ${size[7]} ${size.standard};
 `;
 
 export default {

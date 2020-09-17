@@ -23,6 +23,32 @@ function MyApp({ Component, pageProps, site }) {
             font-weight: 400;
             font-style: normal;
           }
+
+          @font-face {
+            font-family: GTFlexa;
+            src: url("/fonts/GT-Flexa-Regular-Trial.woff2") format("woff2");
+            font-weight: 400;
+            font-style: normal;
+          }
+          @font-face {
+            font-family: GTFlexa;
+            src: url("/fonts/GT-Flexa-Regular-Italic-Trial.woff2")
+              format("woff2");
+            font-weight: 400;
+            font-style: italic;
+          }
+          @font-face {
+            font-family: GTFlexa;
+            src: url("/fonts/GT-Flexa-Thin-Trial.woff2") format("woff2");
+            font-weight: 300;
+            font-style: normal;
+          }
+          @font-face {
+            font-family: GTFlexa;
+            src: url("/fonts/GT-Flexa-Thin-Italic-Trial.woff2") format("woff2");
+            font-weight: 300;
+            font-style: italic;
+          }
         `}
       </style>
       <Footer data={site} />

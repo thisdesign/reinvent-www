@@ -7,7 +7,7 @@ import { IntroHead } from "components";
 const ModuleIntro: React.FC<{ data: ModuleIntroType }> = ({ data }) => {
   return (
     <S.Intro>
-      <IntroHead>
+      <IntroHead center>
         <BlockCOntentToReact
           blocks={data.text}
           serializers={{

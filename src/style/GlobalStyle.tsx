@@ -62,6 +62,14 @@ const style = css`
     width: 100%;
     max-width: 100%;
   }
+
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: 500;
+  }
 `;
 
 const GlobalStyle = createGlobalStyle`
