@@ -43,10 +43,15 @@ export const IntroHead = styled.h2<HeadingProps>`
 
 export const HomepageHeroText = styled.h1<HeadingProps>`
   ${SHARED_PROPS};
-  font-size: ${size[5]};
+
+  font-size: ${size[3]};
   font-family: ${fontFamilies.display};
 
   em {
     font-weight: 300;
+  }
+
+  @media ${mq.sm} {
+    font-size: ${size[4]};
   }
 `;

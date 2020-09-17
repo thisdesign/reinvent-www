@@ -1,7 +1,10 @@
 import { getSite } from "lib/api";
-import { Seo, Layout, Footer } from "components";
+import { Seo, Footer } from "components";
 import { createContext } from "react";
 import { SiteSchema } from "types";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export const AppCtx = createContext<{ site: SiteSchema }>({
   site: (null as unknown) as SiteSchema,
