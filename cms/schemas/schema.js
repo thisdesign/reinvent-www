@@ -8,10 +8,12 @@ import richTextStandard from "./richTextStandard";
 import companies from "./companies";
 import moduleAbout from "./moduleAbout";
 import moduleBullets from "./moduleBullets";
+import moduleIntro from "./moduleIntro";
 
 export default createSchema({
   name: "default",
   types: schemaTypes.concat([
+    moduleIntro,
     moduleBullets,
     moduleAbout,
     companies,

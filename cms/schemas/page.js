@@ -30,6 +30,7 @@ export default {
         { type: "companies" },
         { type: "moduleAbout" },
         { type: "bullets" },
+        { type: "intro" },
       ],
     },
   ],
