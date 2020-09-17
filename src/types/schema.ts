@@ -57,7 +57,7 @@ export type PageSchema = {
   modules?: Module[];
 };
 
-export type Module = ModuleTeam | ModuleCompanies;
+export type Module = ModuleTeam | ModuleCompanies | ModuleAbout;
 
 export type ModuleTeam = {
   _type: "team";
@@ -73,4 +73,14 @@ export type ModuleCompanies = {
     image: SanityImage;
     name: string;
   }[];
+};
+
+export type ModuleAbout = {
+  _key: string;
+  _type: "moduleAbout";
+  featuredImage?: SanityImage;
+  name?: string;
+  signature?: SanityImage;
+  statement?: SanityBlockContent;
+  title?: string;
 };

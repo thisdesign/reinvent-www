@@ -5,6 +5,8 @@ import { GetStaticProps } from "next";
 import { PageSchema } from "types";
 
 const Home: React.FC<{ data: PageSchema }> = ({ data }) => {
+  console.log(JSON.stringify(data.modules[0]));
+
   return (
     <Layout slug="about">
       <Modules data={data.modules || []} />
