@@ -1,41 +1,25 @@
-import { Layout } from "components";
+import { Layout, Modules } from "components";
 import { getSite } from "lib/api";
-import { SiteSchema } from "types";
+import client from "lib/sanity";
+import { GetStaticProps } from "next";
+import { PageSchema } from "types";
 
-const Home: React.FC<{ site: SiteSchema }> = () => {
-  // console.log(JSON.stringify(site.com));
-
+const Home: React.FC<{ data: PageSchema }> = ({ data }) => {
   return (
     <Layout slug="about">
-      {/* <Hero text={site.intro} />
-      <Nav />
-      <Container>
-        <Anchor id="companies" />
-        <Companies data={site.companies} />
-        <Anchor id="team" />
-        <TextBlock
-          center
-          eyebrow={site.team.eyebrow}
-          head={site.team.main}
-          support={site.team.support}
-        />
-        <TeamMembers members={site.team.members} />
-        <Anchor id="contact" />
-      </Container>
-      <Contact data={site.contact} emailAddress={site.contactEmail} /> */}
+      <Modules data={data.modules || []} />
     </Layout>
   );
 };
 
-export const getStaticProps = async () => {
-  const getDataFromCms = async () => {
-    const site = await getSite();
-    return { site };
-  };
+export const getStaticProps: GetStaticProps = async () => {
+  const data = await client.fetch(
+    `*[_type == 'page' && slug.current == $slug][0]`,
+    { slug: "home" }
+  );
 
   return {
-    props: await getDataFromCms(),
-    revalidate: 1,
+    props: { data },
   };
 };
 

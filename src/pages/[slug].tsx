@@ -14,7 +14,6 @@ const PageTemplate: NextPage<{ data: PageSchema; slug: string }> = ({
       {data ? (
         <>
           {/* TODO: add seo to this */}
-          {data.title}
           <Modules data={data.modules || []} />
         </>
       ) : (
