@@ -1,5 +1,10 @@
 import Layout from "./Layout/Layout";
-import { LargeHead, MediumHead, IntroHead } from "./Type/Type";
+import {
+  LargeHead,
+  MediumHead,
+  IntroHead,
+  HomepageHeroText,
+} from "./Type/Type";
 import Nav from "./Nav/Nav";
 import ArrowDown, { ArrowRight, ArrowLeft } from "./ArrowDown/ArrowDown";
 import SanityBlockContent from "./SanityBlockContent/SanityBlockContent";
@@ -11,6 +16,7 @@ import Container from "./Container/Container";
 import Seo from "./Seo/Seo";
 import Terms from "./Terms/Terms";
 import Modules from "./Modules/Modules";
+import PureBlockContent from "./PureBlockContent/PureBlockContent";
 
 /** Modules */
 import ModuleTeamMembers from "./Modules/ModuleTeamMembers/ModuleTeamMembers";
@@ -18,6 +24,8 @@ import ModuleCompanies from "./Modules/ModuleCompanies/ModuleCompanies";
 import ModuleBullets from "./Modules/ModuleBullets/ModuleBullets";
 
 export {
+  HomepageHeroText,
+  PureBlockContent,
   ModuleBullets,
   IntroHead,
   ArrowLeft,

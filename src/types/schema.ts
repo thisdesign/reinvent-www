@@ -62,7 +62,8 @@ export type Module =
   | ModuleCompanies
   | ModuleAbout
   | ModuleIntro
-  | ModuleBullets;
+  | ModuleBullets
+  | ModuleHomepageHero;
 
 export type ModuleTeam = {
   _type: "team";
@@ -105,5 +106,15 @@ export type ModuleBullets = {
     icon: SanityImage;
     text: SanityBlockContent[];
     title: string;
+  }[];
+};
+
+export type ModuleHomepageHero = {
+  _key: string;
+  _type: "homepageHero";
+  content: {
+    _key: string;
+    _type: "bullet";
+    text: SanityBlockContent;
   }[];
 };

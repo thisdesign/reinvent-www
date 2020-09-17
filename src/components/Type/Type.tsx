@@ -40,3 +40,13 @@ export const IntroHead = styled.h2<HeadingProps>`
   font-weight: 400;
   max-width: 20em;
 `;
+
+export const HomepageHeroText = styled.h1<HeadingProps>`
+  ${SHARED_PROPS};
+  font-size: ${size[5]};
+  font-family: ${fontFamilies.display};
+
+  em {
+    font-weight: 300;
+  }
+`;
