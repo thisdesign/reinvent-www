@@ -57,6 +57,8 @@ const _scale = {
 
 export const size = {
   ..._scale,
+  navHeight: "4rem",
+  maxWidth: "1400px",
   standard: `var(--size-standard)`,
   standardY: `var(--ms4)`,
 };

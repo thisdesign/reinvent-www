@@ -1,51 +1,22 @@
+import { size } from "style";
 import styled from "styled-components";
-import { size, ease, zIndex, tr } from "style";
-import mq from "style/mq";
 
-const Wrapper = styled.nav<{ active: boolean }>`
-  padding: ${size[0]} ${size.standard};
+const Wrapper = styled.nav`
   display: flex;
   justify-content: space-between;
-
-  display: relative;
-  z-index: ${zIndex.nav};
-  background: ${(p) => (p.active ? "white" : "transparent")};
-
-  @media ${mq.sm} {
-    position: sticky;
-    top: 0;
-  }
-  /* Transitions */
-  opacity: 0;
-  transform: translate3d(0, 1rem, 0);
-  transition: ${tr(["transform", "opacity"], 2)};
-
-  .mounted & {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
+  height: ${size.navHeight};
+  max-width: ${size.maxWidth};
+  margin: 0 auto;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: white;
 `;
 
-const ItemWrap = styled.ul`
-  display: flex;
-
-  li {
-    padding-left: ${size[0]};
-
-    @media ${mq.sm} {
-      padding-left: ${size[2]};
-    }
+const Links = styled.div`
+  a {
+    display: inline-block;
+    margin-left: ${size[0]};
   }
 `;
-
-const LogoWrap = styled.div<{ active: boolean }>`
-  opacity: ${(p) => (p.active ? 0 : 1)};
-  transition: 200ms opacity ${ease.standard};
-  position: absolute;
-`;
-
-export default {
-  LogoWrap,
-  ItemWrap,
-  Wrapper,
-};
+export default { Links, Wrapper };

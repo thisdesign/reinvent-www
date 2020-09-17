@@ -14,16 +14,6 @@ function MyApp({ Component, pageProps, site }) {
     <AppCtx.Provider value={{ site }}>
       <Seo title={site.title} url={site.url} description={site.intro} />
       <Layout>
-        {site.primaryNav.map((navItem) => (
-          <Link
-            key={navItem.title}
-            href="/[slug]"
-            as={`/${navItem.slug.current}`}
-          >
-            <a>{navItem.title}</a>
-          </Link>
-        ))}
-
         <Component {...pageProps} />
         <style jsx global>
           {`

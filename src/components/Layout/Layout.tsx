@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react";
+import Nav from "components/Nav/Nav";
+import React from "react";
 import GlobalStyle from "style/GlobalStyle";
 import S from "./Layout.Styled";
 
 const Layout: React.FC = ({ children }) => {
-  const [isMounted, setMount] = useState(false);
-  useEffect(() => {
-    setMount(true);
-  }, []);
   return (
-    <div className={isMounted ? "mounted" : ""}>
+    <div>
       <GlobalStyle />
+      <Nav />
       <S.Main>{children}</S.Main>
     </div>
   );
