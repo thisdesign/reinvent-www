@@ -29,6 +29,7 @@ export default {
         { type: "team" },
         { type: "companies" },
         { type: "moduleAbout" },
+        { type: "bullets" },
       ],
     },
   ],

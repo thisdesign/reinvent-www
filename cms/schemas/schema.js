@@ -7,11 +7,12 @@ import team from "./team";
 import richTextStandard from "./richTextStandard";
 import companies from "./companies";
 import moduleAbout from "./moduleAbout";
+import moduleBullets from "./moduleBullets";
 
 export default createSchema({
   name: "default",
   types: schemaTypes.concat([
-    //
+    moduleBullets,
     moduleAbout,
     companies,
     site,
