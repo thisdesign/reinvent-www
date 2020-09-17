@@ -15,8 +15,10 @@ import Modules from "./Modules/Modules";
 /** Modules */
 import ModuleTeamMembers from "./Modules/ModuleTeamMembers/ModuleTeamMembers";
 import ModuleCompanies from "./Modules/ModuleCompanies/ModuleCompanies";
+import ModuleBullets from "./Modules/ModuleBullets/ModuleBullets";
 
 export {
+  ModuleBullets,
   IntroHead,
   ArrowLeft,
   ArrowRight,

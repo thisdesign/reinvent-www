@@ -57,7 +57,12 @@ export type PageSchema = {
   modules?: Module[];
 };
 
-export type Module = ModuleTeam | ModuleCompanies | ModuleAbout | ModuleIntro;
+export type Module =
+  | ModuleTeam
+  | ModuleCompanies
+  | ModuleAbout
+  | ModuleIntro
+  | ModuleBullets;
 
 export type ModuleTeam = {
   _type: "team";
@@ -89,4 +94,16 @@ export type ModuleIntro = {
   _key: string;
   _type: "intro";
   text: SanityBlockContent;
+};
+
+export type ModuleBullets = {
+  _key: string;
+  _type: "bullets";
+  content: {
+    _key: string;
+    _type: "bullet";
+    icon: SanityImage;
+    text: SanityBlockContent[];
+    title: string;
+  }[];
 };

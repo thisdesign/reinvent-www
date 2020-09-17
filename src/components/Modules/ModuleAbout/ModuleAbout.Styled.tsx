@@ -6,8 +6,10 @@ const About = styled.div`
   @media ${mq.sm} {
     display: flex;
   }
+
+  border: 1px solid blue;
   max-width: ${size.maxWidth};
-  margin: ${size.standardY} 0;
+  margin: ${size.standardY} auto;
   align-items: center;
 `;
 

@@ -2,15 +2,18 @@ import { size, colors } from "style";
 import styled from "styled-components";
 
 const Wrapper = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  height: ${size.navHeight};
-  max-width: ${size.maxWidth};
-  margin: 0 auto;
-  align-items: center;
   position: sticky;
   top: 0;
   background: white;
+`;
+
+const Inner = styled.div`
+  max-width: ${size.maxWidth};
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: ${size.navHeight};
+  align-items: center;
   padding: ${size.standard};
 `;
 
@@ -23,4 +26,4 @@ const Link = styled.a<{ active: boolean }>`
   border-bottom: ${(p) => (p.active ? ` 1px solid ${colors.blue}` : "none")};
   cursor: pointer;
 `;
-export default { Links, Link, Wrapper };
+export default { Links, Link, Wrapper, Inner };

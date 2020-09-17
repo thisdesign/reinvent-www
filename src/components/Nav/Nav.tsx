@@ -9,27 +9,29 @@ const Nav: React.FC<{ slug: string }> = ({ slug }) => {
 
   return (
     <S.Wrapper>
-      <Link href="/">
-        <a>
-          <Logo />
-        </a>
-      </Link>
-      <S.Links>
-        <Link href="/#about">
-          <S.Link active={slug === "about"}>About</S.Link>
+      <S.Inner>
+        <Link href="/">
+          <a>
+            <Logo />
+          </a>
         </Link>
-        {site.primaryNav.map((navItem) => (
-          <Link
-            key={navItem.title}
-            href="/[slug]"
-            as={`/${navItem.slug.current}`}
-          >
-            <S.Link active={slug === navItem.slug.current}>
-              {navItem.title}
-            </S.Link>
+        <S.Links>
+          <Link href="/#about">
+            <S.Link active={slug === "about"}>About</S.Link>
           </Link>
-        ))}
-      </S.Links>
+          {site.primaryNav.map((navItem) => (
+            <Link
+              key={navItem.title}
+              href="/[slug]"
+              as={`/${navItem.slug.current}`}
+            >
+              <S.Link active={slug === navItem.slug.current}>
+                {navItem.title}
+              </S.Link>
+            </Link>
+          ))}
+        </S.Links>
+      </S.Inner>
     </S.Wrapper>
   );
 };

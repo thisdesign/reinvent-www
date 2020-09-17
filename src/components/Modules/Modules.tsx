@@ -1,4 +1,4 @@
-import { ModuleCompanies, ModuleTeamMembers } from "components";
+import { ModuleCompanies, ModuleTeamMembers, ModuleBullets } from "components";
 import React from "react";
 import { Module } from "types";
 import ModuleAbout from "./ModuleAbout/ModuleAbout";
@@ -17,6 +17,8 @@ const Modules: React.FC<{ data: Module[] }> = ({ data: modules }) => {
             return <ModuleAbout data={module} key={module._key} />;
           case "intro":
             return <ModuleIntro data={module} key={module._key} />;
+          case "bullets":
+            return <ModuleBullets data={module} key={module._key} />;
           default:
             return null;
         }
