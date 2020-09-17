@@ -9,11 +9,15 @@ const Nav: React.FC<{ slug: string }> = ({ slug }) => {
 
   return (
     <S.Wrapper>
-      <Logo />
+      <Link href="/">
+        <a>
+          <Logo />
+        </a>
+      </Link>
       <S.Links>
-        <S.Link href="/#about" active={slug === "about"}>
-          About
-        </S.Link>
+        <Link href="/#about">
+          <S.Link active={slug === "about"}>About</S.Link>
+        </Link>
         {site.primaryNav.map((navItem) => (
           <Link
             key={navItem.title}
