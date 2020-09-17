@@ -7,7 +7,6 @@ const About = styled.div`
     display: flex;
   }
 
-  border: 1px solid blue;
   max-width: ${size.maxWidth};
   margin: ${size.standardY} auto;
   align-items: center;
