@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: ${size.standard};
-  margin: ${size.standardY} 0;
+  margin: ${size.standardY} ${size.standard};
 
   @media ${mq.sm} {
     grid-template-columns: 1fr 1fr 1fr;
