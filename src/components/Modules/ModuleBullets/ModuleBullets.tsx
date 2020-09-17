@@ -1,4 +1,5 @@
-import { SanityBlockContent } from "components";
+import { SanityBlockContent, LargeHead } from "components";
+import { urlFor } from "lib/sanity";
 import React from "react";
 import { ModuleBullets as ModuleBulletsType } from "types";
 import S from "./ModuleBullets.Styled";
@@ -8,8 +9,15 @@ const ModuleBullets: React.FC<{ data: ModuleBulletsType }> = ({ data }) => {
     <div>
       {data.content.map((content) => (
         <S.Bullet key={content._key}>
-          <div>{content.title}</div>
-          <SanityBlockContent serif blocks={content.text} />
+          <S.BulletInner>
+            <S.ImagePane>
+              <img src={urlFor(content.icon).width(800).url()} />
+            </S.ImagePane>
+            <S.TextPane>
+              <LargeHead>{content.title}</LargeHead>
+              <SanityBlockContent serif blocks={content.text} />
+            </S.TextPane>
+          </S.BulletInner>
         </S.Bullet>
       ))}
     </div>
