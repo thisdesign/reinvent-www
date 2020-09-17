@@ -15,6 +15,29 @@ const Hero = styled.div`
   max-width: ${size.maxWidth};
   margin: 0 auto;
 
+  .slick-dots {
+    li,
+    button {
+      margin: 0;
+    }
+
+    button {
+      &::before {
+        color: ${colors.grey};
+        opacity: 1;
+        font-size: 8px;
+      }
+    }
+    .slick-active {
+      button {
+        &::before {
+          opacity: 1;
+          color: ${colors.blue};
+        }
+      }
+    }
+  }
+
   .arrow {
     margin: 0 auto;
     position: absolute;
