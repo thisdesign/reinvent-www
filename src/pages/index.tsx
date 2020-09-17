@@ -1,3 +1,4 @@
+import { Layout } from "components";
 import { getSite } from "lib/api";
 import { SiteSchema } from "types";
 
@@ -5,7 +6,7 @@ const Home: React.FC<{ site: SiteSchema }> = () => {
   // console.log(JSON.stringify(site.com));
 
   return (
-    <>
+    <Layout slug="about">
       {/* <Hero text={site.intro} />
       <Nav />
       <Container>
@@ -22,7 +23,7 @@ const Home: React.FC<{ site: SiteSchema }> = () => {
         <Anchor id="contact" />
       </Container>
       <Contact data={site.contact} emailAddress={site.contactEmail} /> */}
-    </>
+    </Layout>
   );
 };
 

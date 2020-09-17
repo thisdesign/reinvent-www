@@ -19,12 +19,25 @@ export const sizeVars = _sizes
  * Theme
  */
 
+export const fontFamilies = {
+  serif: "Times, Times New Roman, serif",
+  sansSerif: "BasisGrotesque, Helvetica, Arial, sans-serif",
+  display: "GTFlexa, Helvetica, Arial, sans-serif",
+};
+
 export const colors = {
   black: "#000",
   white: "white",
-  grey: "grey",
-  ltGrey: "#b9b9b9",
   blue: "#6BBDF3",
+
+  /** Almost black */
+  charcoal: "#353535",
+
+  /** Standard text */
+  grey: "grey",
+
+  /** Almost White */
+  ltGrey: "#F7F7F7",
 };
 
 export const ease = {

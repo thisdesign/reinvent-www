@@ -3,11 +3,11 @@ import React from "react";
 import GlobalStyle from "style/GlobalStyle";
 import S from "./Layout.Styled";
 
-const Layout: React.FC = ({ children }) => {
+const Layout: React.FC<{ slug: string }> = ({ children, slug }) => {
   return (
     <div>
       <GlobalStyle />
-      <Nav />
+      <Nav slug={slug} />
       <S.Main>{children}</S.Main>
     </div>
   );

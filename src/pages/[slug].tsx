@@ -3,29 +3,35 @@ import { GetStaticProps, NextPage } from "next";
 import React from "react";
 import { PageSchema } from "types";
 import Error from "next/error";
-import { Modules } from "components";
+import { Layout, Modules } from "components";
 
-const PageTemplate: NextPage<{ data: PageSchema }> = ({ data }) => {
-  if (!data) {
-    return <Error statusCode={404} />;
-  }
-
+const PageTemplate: NextPage<{ data: PageSchema; slug: string }> = ({
+  data,
+  slug,
+}) => {
   return (
-    <>
-      {/* TODO: add seo to this */}
-      {data.title}
-      <Modules data={data.modules || []} />
-    </>
+    <Layout slug={slug}>
+      {data ? (
+        <>
+          {/* TODO: add seo to this */}
+          {data.title}
+          <Modules data={data.modules || []} />
+        </>
+      ) : (
+        <Error statusCode={404} />
+      )}
+    </Layout>
   );
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
+  const slug = ctx.params.slug.toString();
   const data = await client.fetch(
     `*[_type == 'page' && slug.current == $slug][0]`,
-    { slug: ctx.params.slug.toString() }
+    { slug }
   );
 
-  return { props: { data } };
+  return { props: { data, slug } };
 };
 
 export const getStaticPaths = async () => {
