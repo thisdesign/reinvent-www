@@ -1,14 +1,10 @@
 import styled from "styled-components";
 
-const HomeContent = styled.div`
-  flex: 1;
-`;
-const NavWrap = styled.div`
-  display: flex;
-  justify-content: space-between;
+const Main = styled.main`
+  max-width: 1400px;
+  margin: 0 auto;
 `;
 
 export default {
-  HomeContent,
-  NavWrap,
+  Main,
 };
