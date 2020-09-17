@@ -2,13 +2,18 @@ import { getSite } from "lib/api";
 import { Seo, Layout, Footer, Logo } from "components";
 import S from "../components/Hero/Hero.Styled";
 import Link from "next/link";
+import { createContext } from "react";
+import { SiteSchema } from "types";
+
+export const AppCtx = createContext<{ site: SiteSchema }>({
+  site: (null as unknown) as SiteSchema,
+});
 
 function MyApp({ Component, pageProps, site }) {
   return (
-    <>
+    <AppCtx.Provider value={{ site }}>
       <Seo title={site.title} url={site.url} description={site.intro} />
       <Layout>
-        {/* TODO: make context from site data */}
         {site.primaryNav.map((navItem) => (
           <Link
             key={navItem.title}
@@ -18,11 +23,7 @@ function MyApp({ Component, pageProps, site }) {
             <a>{navItem.title}</a>
           </Link>
         ))}
-        <S.LogoWrap>
-          <a href="/">
-            <Logo />
-          </a>
-        </S.LogoWrap>
+
         <Component {...pageProps} />
         <style jsx global>
           {`
@@ -37,7 +38,7 @@ function MyApp({ Component, pageProps, site }) {
         </style>
         <Footer data={site} />
       </Layout>
-    </>
+    </AppCtx.Provider>
   );
 }
 
