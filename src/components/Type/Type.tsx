@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { size, colors } from "style";
+import { size, fontFamilies } from "style";
 import mq from "style/mq";
 
 type HeadingProps = {
@@ -33,20 +33,8 @@ export const MediumHead = styled.h3`
   }
 `;
 
-export const Support = styled.p`
+export const IntroHead = styled.h2<HeadingProps>`
   ${SHARED_PROPS};
-  color: ${colors.grey};
-  line-height: 1.2;
-  font-size: ${size[1]};
-  max-width: 15em;
-
-  @media ${mq.sm} {
-    font-size: ${size[2]};
-  }
-`;
-
-export const Eyebrow = styled.h2`
-  ${SHARED_PROPS};
-  color: ${colors.grey};
-  font-size: ${size[0]};
+  font-family: ${fontFamilies.display};
+  font-size: ${size[2]};
 `;

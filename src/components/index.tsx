@@ -1,10 +1,9 @@
 import Layout from "./Layout/Layout";
-import { LargeHead, Support, MediumHead, Eyebrow } from "./Type/Type";
+import { LargeHead, MediumHead, IntroHead } from "./Type/Type";
 import Nav from "./Nav/Nav";
 import ArrowDown, { ArrowRight, ArrowLeft } from "./ArrowDown/ArrowDown";
 import SanityBlockContent from "./SanityBlockContent/SanityBlockContent";
 import Logo from "./Logo/Logo";
-import TextBlock from "./TextBlock/Text";
 import Anchor from "./Anchor/Anchor";
 import AnchorButton from "./AnchorButton/AnchorButton";
 import Footer from "./Footer/Footer";
@@ -18,6 +17,7 @@ import ModuleTeamMembers from "./Modules/ModuleTeamMembers/ModuleTeamMembers";
 import ModuleCompanies from "./Modules/ModuleCompanies/ModuleCompanies";
 
 export {
+  IntroHead,
   ArrowLeft,
   ArrowRight,
   ArrowDown,
@@ -29,14 +29,11 @@ export {
   Footer,
   AnchorButton,
   Anchor,
-  Eyebrow,
-  TextBlock,
   MediumHead,
   Logo,
   SanityBlockContent,
   ModuleTeamMembers,
   Nav,
-  Support,
   Layout,
   LargeHead,
 };
