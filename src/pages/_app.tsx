@@ -1,7 +1,5 @@
 import { getSite } from "lib/api";
-import { Seo, Layout, Footer, Logo } from "components";
-import S from "../components/Hero/Hero.Styled";
-import Link from "next/link";
+import { Seo, Layout, Footer } from "components";
 import { createContext } from "react";
 import { SiteSchema } from "types";
 

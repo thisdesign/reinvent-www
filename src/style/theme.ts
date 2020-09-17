@@ -24,8 +24,7 @@ export const colors = {
   white: "white",
   grey: "grey",
   ltGrey: "#b9b9b9",
-  blue: "#6ABDF3",
-  ltBlue: "#8BD1FF",
+  blue: "#6BBDF3",
 };
 
 export const ease = {

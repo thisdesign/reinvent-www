@@ -7,8 +7,6 @@ import Link from "next/link";
 const Nav = () => {
   const { site } = useGlobalData();
 
-  console.log(site);
-
   return (
     <S.Wrapper>
       <Logo />
