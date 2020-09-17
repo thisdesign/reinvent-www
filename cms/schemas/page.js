@@ -31,6 +31,7 @@ export default {
         { type: "moduleAbout" },
         { type: "bullets" },
         { type: "intro" },
+        { type: "homepageHero" },
       ],
     },
   ],
