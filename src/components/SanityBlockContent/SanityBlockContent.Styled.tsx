@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { size, colors } from "style";
+import { size, colors, fontFamilies } from "style";
 import mq from "style/mq";
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ serif: boolean }>`
   /**
    *
    * Headings
@@ -48,6 +48,8 @@ const Wrapper = styled.div`
     }
   }
   p {
+    font-family: ${(p) =>
+      p.serif ? fontFamilies.serif : fontFamilies.sansSerif};
     margin-bottom: ${size[-1]};
     line-height: 1.3;
     color: ${colors.grey};

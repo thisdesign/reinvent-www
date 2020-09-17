@@ -4,9 +4,10 @@ import S from "./SanityBlockContent.Styled";
 
 const BlockContent: React.FC<{
   blocks: SanityBlockContent;
-}> = ({ blocks, ...props }) => {
+  serif?: boolean;
+}> = ({ blocks, serif, ...props }) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper serif={serif}>
       <BlockContentToReact blocks={blocks} {...props} />
     </S.Wrapper>
   );
