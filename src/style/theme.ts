@@ -20,7 +20,6 @@ export const sizeVars = _sizes
  */
 
 export const fontFamilies = {
-  serif: "Times, Times New Roman, serif",
   sansSerif: "BasisGrotesque, Helvetica, Arial, sans-serif",
   display: "GTFlexa, Helvetica, Arial, sans-serif",
 };
@@ -72,7 +71,7 @@ export const size = {
   navHeight: "3rem",
   maxWidth: "1400px",
   standard: `var(--size-standard)`,
-  standardY: `var(--ms4)`,
+  standardY: `calc(var(--size-standard) * 1.44)`,
 };
 
 export const zIndex = {

@@ -49,8 +49,7 @@ const Wrapper = styled.div<{ serif: boolean }>`
     }
   }
   p {
-    font-family: ${(p) =>
-      p.serif ? fontFamilies.serif : fontFamilies.sansSerif};
+    font-family: ${fontFamilies.sansSerif};
     margin-bottom: ${size[-1]};
     line-height: 1.3;
     color: ${colors.grey};

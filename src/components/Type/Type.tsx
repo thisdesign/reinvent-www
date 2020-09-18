@@ -46,6 +46,7 @@ export const HomepageHeroText = styled.h1<HeadingProps>`
 
   font-size: ${size[3]};
   font-family: ${fontFamilies.display};
+  line-height: 1;
 
   em {
     font-weight: 300;
@@ -53,5 +54,11 @@ export const HomepageHeroText = styled.h1<HeadingProps>`
 
   @media ${mq.sm} {
     font-size: ${size[4]};
+  }
+  @media ${mq.md} {
+    font-size: ${size[5]};
+  }
+  @media ${mq.lg} {
+    font-size: ${size[6]};
   }
 `;
