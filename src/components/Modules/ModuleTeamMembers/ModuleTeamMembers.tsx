@@ -12,8 +12,8 @@ const TeamMembers: React.FC<{ data: ModuleTeam }> = ({ data }) => {
   const closeModal = () => setcurrentIndex(null);
 
   return (
-    <>
-      <S.Wrapper as="ul">
+    <S.Wrapper>
+      <S.Grid as="ul">
         {data.members.map((member, i) => (
           <li key={member._key} onClick={() => setcurrentIndex(i)}>
             <img src={urlFor(member.image).width(900).quality(60).url()} />
@@ -21,7 +21,7 @@ const TeamMembers: React.FC<{ data: ModuleTeam }> = ({ data }) => {
             <S.JobTitle>{member.jobTitle}</S.JobTitle>
           </li>
         ))}
-      </S.Wrapper>
+      </S.Grid>
       <MemberModal
         key={currentIndex}
         closeModal={closeModal}
@@ -29,7 +29,7 @@ const TeamMembers: React.FC<{ data: ModuleTeam }> = ({ data }) => {
         currentIndex={currentIndex}
         setcurrentIndex={setcurrentIndex}
       />
-    </>
+    </S.Wrapper>
   );
 };
 

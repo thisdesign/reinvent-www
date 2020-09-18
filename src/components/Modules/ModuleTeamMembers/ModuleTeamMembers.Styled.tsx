@@ -2,16 +2,30 @@ import styled from "styled-components";
 import { size, colors, zIndex } from "style";
 import mq from "style/mq";
 
-const Wrapper = styled.div`
+const Wrapper = styled.ul`
   max-width: ${size.maxWidth};
   margin: ${size.standardY} auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: ${size.standard};
+
   padding: 0 ${size.standard};
+`;
+
+const Grid = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -3%;
 
   @media ${mq.sm} {
-    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+  }
+
+  li {
+    cursor: pointer;
+    flex-basis: 50%;
+    padding: 3%;
+
+    @media ${mq.sm} {
+      flex-basis: 33.3%;
+    }
   }
 
   img {
@@ -19,10 +33,6 @@ const Wrapper = styled.div`
     border-radius: ${size[0]};
     display: block;
     margin-bottom: ${size[0]};
-  }
-
-  li {
-    cursor: pointer;
   }
 `;
 
@@ -99,6 +109,7 @@ const ProfileTitleWrap = styled.div`
 `;
 
 export default {
+  Grid,
   Close,
   ProfileTitleWrap,
   NavWrap,
