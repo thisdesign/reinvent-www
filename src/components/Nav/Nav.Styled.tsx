@@ -1,10 +1,11 @@
-import { size, colors } from "style";
+import { size, colors, zIndex } from "style";
 import styled from "styled-components";
 
 const Wrapper = styled.nav`
   position: sticky;
   top: 0;
   background: white;
+  z-index: ${zIndex.nav};
 `;
 
 const Inner = styled.div`
