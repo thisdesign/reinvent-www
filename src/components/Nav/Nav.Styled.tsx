@@ -69,8 +69,9 @@ const MobileMenuContent = styled.div`
 const MobileMenuBar = styled.div`
   display: flex;
   justify-content: flex-end;
-  padding: ${size[0]};
+  padding: ${size[2]};
   font-size: ${size[2]};
+  line-height: 0.5;
 `;
 
 export default {
