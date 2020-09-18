@@ -13,10 +13,12 @@ const Statement = styled.div`
   font-size: ${size[-1]};
   text-align: center;
   color: white;
-  transform: translateY(-4.5rem);
   opacity: 0;
   transition: ${ANIM_TIME} transform ${ease.standard},
     ${ANIM_TIME} opacity ${ease.standard};
+  @media ${mq.md} {
+    transform: translateY(-4.5rem);
+  }
 `;
 
 const ImgWrap = styled.ul`
@@ -57,7 +59,9 @@ const ImgWrap = styled.ul`
       }
 
       ${Statement} {
-        transform: translateY(-4rem);
+        @media ${mq.md} {
+          transform: translateY(-4rem);
+        }
         opacity: 1;
       }
     }
