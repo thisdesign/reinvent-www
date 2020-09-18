@@ -66,7 +66,8 @@ export type Module =
   | ModuleAbout
   | ModuleIntro
   | ModuleBullets
-  | ModuleHomepageHero;
+  | ModuleHomepageHero
+  | ModuleTextPage;
 
 export type ModuleTeam = {
   _type: "team";
@@ -121,4 +122,11 @@ export type ModuleHomepageHero = {
     _type: "bullet";
     text: SanityBlockContent;
   }[];
+};
+
+export type ModuleTextPage = {
+  _type: "textPage";
+  _key: string;
+  text?: SanityBlockContent;
+  title?: string;
 };

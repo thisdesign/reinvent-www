@@ -32,6 +32,7 @@ export default {
         { type: "bullets" },
         { type: "intro" },
         { type: "homepageHero" },
+        { type: "textPage" },
       ],
     },
   ],

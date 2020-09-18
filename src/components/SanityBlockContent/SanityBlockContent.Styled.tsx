@@ -3,6 +3,7 @@ import { size, colors, fontFamilies } from "style";
 import mq from "style/mq";
 
 const Wrapper = styled.div<{ serif: boolean }>`
+  max-width: 35rem;
   /**
    *
    * Headings
@@ -15,16 +16,16 @@ const Wrapper = styled.div<{ serif: boolean }>`
     font-size: ${size[0]};
   }
   h4 {
-    font-size: ${size[1]};
+    font-size: ${size[0]};
   }
   h3 {
-    font-size: ${size[2]};
+    font-size: ${size[1]};
   }
   h2 {
-    font-size: ${size[3]};
+    font-size: ${size[2]};
   }
   h1 {
-    font-size: ${size[4]};
+    font-size: ${size[3]};
   }
   h1,
   h2,

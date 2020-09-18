@@ -4,6 +4,7 @@ import { Module } from "types";
 import ModuleAbout from "./ModuleAbout/ModuleAbout";
 import ModuleIntro from "./ModuleIntro/ModuleIntro";
 import ModuleHomepageHero from "./ModuleHomepageHero/ModuleHomepageHero";
+import ModuleTextPage from "./ModuleTextPage/ModuleTextPage";
 
 const Modules: React.FC<{ data: Module[] }> = ({ data: modules }) => {
   return (
@@ -22,6 +23,8 @@ const Modules: React.FC<{ data: Module[] }> = ({ data: modules }) => {
             return <ModuleBullets data={module} key={module._key} />;
           case "homepageHero":
             return <ModuleHomepageHero data={module} key={module._key} />;
+          case "textPage":
+            return <ModuleTextPage data={module} key={module._key} />;
           default:
             return null;
         }

@@ -10,10 +10,12 @@ import moduleAbout from "./moduleAbout";
 import moduleBullets from "./moduleBullets";
 import moduleIntro from "./moduleIntro";
 import ModuleHomepageHero from "./ModuleHomepageHero";
+import moduleTextPage from "./moduleTextPage";
 
 export default createSchema({
   name: "default",
   types: schemaTypes.concat([
+    moduleTextPage,
     ModuleHomepageHero,
     moduleIntro,
     moduleBullets,
