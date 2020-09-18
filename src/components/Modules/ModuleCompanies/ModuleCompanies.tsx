@@ -8,13 +8,14 @@ const Companies: React.FC<{ data: ModuleCompanies }> = ({ data }) => {
     <S.Wrapper>
       <S.ImgWrap>
         {data.logos.map((company) => (
-          <img
-            key={company._key}
-            src={urlFor(company.image).width(600).url()}
-            alt={company.name}
-          />
+          <li key={company._key}>
+            <img
+              src={urlFor(company.image).width(600).url()}
+              alt={company.name}
+            />
+            <S.Statement>{company.statement}</S.Statement>
+          </li>
         ))}
-        {/* TODO: add hoverstate here */}
       </S.ImgWrap>
     </S.Wrapper>
   );
