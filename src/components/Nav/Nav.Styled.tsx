@@ -70,6 +70,7 @@ const MobileMenuBar = styled.div`
   display: flex;
   justify-content: flex-end;
   padding: ${size[0]};
+  font-size: ${size[2]};
 `;
 
 export default {
