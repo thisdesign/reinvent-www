@@ -21,7 +21,6 @@ export const sizeVars = _sizes
 
 export const fontFamilies = {
   sansSerif: "BasisGrotesque, Helvetica, Arial, sans-serif",
-  display: "GTFlexa, Helvetica, Arial, sans-serif",
 };
 
 export const colors = {

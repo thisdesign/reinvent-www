@@ -15,7 +15,6 @@ const SHARED_PROPS = css<HeadingProps>`
 export const LargeHead = styled.h1`
   ${SHARED_PROPS};
   font-size: ${size[2]};
-  font-family: ${fontFamilies.display};
 
   @media ${mq.sm} {
     font-size: ${size[3]};
@@ -35,7 +34,6 @@ export const MediumHead = styled.h3`
 
 export const IntroHead = styled.h2<HeadingProps>`
   ${SHARED_PROPS};
-  font-family: ${fontFamilies.display};
   font-size: ${size[2]};
   font-weight: 400;
   max-width: 20em;
@@ -45,7 +43,6 @@ export const HomepageHeroText = styled.h1<HeadingProps>`
   ${SHARED_PROPS};
 
   font-size: ${size[3]};
-  font-family: ${fontFamilies.display};
   line-height: 1;
 
   em {
