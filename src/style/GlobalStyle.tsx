@@ -29,7 +29,6 @@ const style = css`
 
   body,
   html {
-    scroll-behavior: smooth;
     font-family: ${fontFamilies.sansSerif};
     color: ${colors.charcoal};
     font-size: 18px;
