@@ -1,6 +1,7 @@
 import { size, colors, zIndex } from "style";
 import styled from "styled-components";
 import mq from "style/mq";
+import { motion } from "framer-motion";
 
 const Wrapper = styled.nav`
   position: sticky;
@@ -42,7 +43,7 @@ const Link = styled.a<{ active: boolean }>`
   cursor: pointer;
 `;
 
-const MobileMenu = styled.div`
+const MobileMenu = styled(motion.div)`
   position: fixed;
   top: 0;
   left: 0;

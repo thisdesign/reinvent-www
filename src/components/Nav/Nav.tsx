@@ -48,12 +48,24 @@ const Nav: React.FC<{ slug: string }> = ({ slug }) => {
   );
 };
 
+const container = {
+  hidden: { opacity: 0, y: ".\rem" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 const MobileMenu: React.FC<{ onClose: () => void }> = ({
   children,
   onClose,
 }) => {
   return (
-    <S.MobileMenu>
+    <S.MobileMenu variants={container} initial="hidden" animate="visible">
       <S.MobileMenuBar onClick={onClose}>
         <div>×</div>
       </S.MobileMenuBar>
