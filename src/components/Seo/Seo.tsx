@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useGlobalData } from "hooks";
 import { SanityImage } from "types";
 import { urlFor } from "lib/sanity";
+import Favicon from "components/Favicon/Favicon";
 
 export type SeoProps = {
   title: string | null;
@@ -52,6 +53,7 @@ const Seo: React.FC<SeoProps> = ({
       {description && <meta name="twitter:description" content={description} />}
       {image && <meta name="twitter:image:src" content={image} />}
       <meta name="twitter:url" content={siteUrl} />
+      <Favicon />
     </Head>
   );
 };

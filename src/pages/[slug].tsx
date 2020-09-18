@@ -9,8 +9,6 @@ const PageTemplate: NextPage<{ data: PageSchema; slug: string }> = ({
   data,
   slug,
 }) => {
-  console.log(data.modules[0]);
-
   return (
     <Layout
       slug={slug}
