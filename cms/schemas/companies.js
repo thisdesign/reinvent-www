@@ -17,6 +17,11 @@ export default {
               validation: (Rule) => Rule.required(),
             },
             {
+              name: "statement",
+              type: "string",
+              validation: (Rule) => Rule.required(),
+            },
+            {
               type: "image",
               name: "image",
               validation: (Rule) => Rule.required(),

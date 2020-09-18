@@ -29,6 +29,7 @@ export type ContactSchema = {
   ctaText: string;
 } & HeadingPair;
 
+/** NOTE: this is out of date now */
 export type SiteSchema = {
   _createdAt: string;
   _id: string;
@@ -80,6 +81,7 @@ export type ModuleCompanies = {
     _key: string;
     image: SanityImage;
     name: string;
+    statement?: string;
   }[];
 };
 
