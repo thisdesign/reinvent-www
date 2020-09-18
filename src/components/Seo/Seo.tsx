@@ -32,8 +32,6 @@ const Seo: React.FC<SeoProps> = ({
   })();
   const description = pageDescription || site.metaDescription;
 
-  console.log(pageTitle);
-
   return (
     <Head>
       <title>{title}</title>
