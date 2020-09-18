@@ -37,7 +37,10 @@ const Nav: React.FC<{ slug: string }> = ({ slug }) => {
           </a>
         </Link>
         <S.Links>{links}</S.Links>
-        <S.Hamburger onClick={() => setMobileMenuOpen(true)}>Menu</S.Hamburger>
+        <S.Hamburger
+          onClick={() => setMobileMenuOpen(isMobileMenuOpen ? false : true)}
+          open={isMobileMenuOpen}
+        ></S.Hamburger>
       </S.Inner>
       {isMobileMenuOpen && (
         <MobileMenu onClose={() => setMobileMenuOpen(false)}>
@@ -49,10 +52,9 @@ const Nav: React.FC<{ slug: string }> = ({ slug }) => {
 };
 
 const container = {
-  hidden: { opacity: 0, y: ".\rem" },
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    y: 0,
     transition: {
       when: "beforeChildren",
       staggerChildren: 0.1,
@@ -66,9 +68,6 @@ const MobileMenu: React.FC<{ onClose: () => void }> = ({
 }) => {
   return (
     <S.MobileMenu variants={container} initial="hidden" animate="visible">
-      <S.MobileMenuBar onClick={onClose}>
-        <div>×</div>
-      </S.MobileMenuBar>
       <S.MobileMenuContent onClick={onClose}>{children}</S.MobileMenuContent>
     </S.MobileMenu>
   );

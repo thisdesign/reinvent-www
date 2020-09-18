@@ -1,4 +1,4 @@
-import { size, colors, zIndex } from "style";
+import { size, colors, zIndex, ease } from "style";
 import styled from "styled-components";
 import mq from "style/mq";
 import { motion } from "framer-motion";
@@ -28,9 +28,37 @@ const Links = styled.div`
   }
 `;
 
-const Hamburger = styled.div`
+const Hamburger = styled.div<{ open: boolean }>`
   display: block;
+  width: ${size[0]};
+  height: ${size[0]};
+  position: relative;
+  /* background: green; */
 
+  &:before,
+  &:after {
+    content: "";
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition: 200ms transform ${ease.standard};
+  }
+
+  &:before {
+    transform: ${(p) =>
+      p.open ? `rotate(-45deg) ` : "translateY(-4px) rotate(0deg)"};
+  }
+
+  &:after {
+    transform: ${(p) =>
+      p.open ? `rotate(45deg) ` : "translateY(4px) rotate(0deg)"};
+  }
+
+  z-index: ${zIndex.nav + 10};
   @media ${mq.sm} {
     display: none;
   }
@@ -67,16 +95,7 @@ const MobileMenuContent = styled.div`
   }
 `;
 
-const MobileMenuBar = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  padding: ${size[2]};
-  font-size: ${size[2]};
-  line-height: 0.5;
-`;
-
 export default {
-  MobileMenuBar,
   Hamburger,
   Links,
   Link,
