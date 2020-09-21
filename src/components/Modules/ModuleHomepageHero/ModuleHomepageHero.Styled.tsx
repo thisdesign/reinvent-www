@@ -3,7 +3,7 @@ import styled from "styled-components";
 import mq from "style/mq";
 
 const Statement = styled.div`
-  min-height: calc(100vh - 10rem);
+  min-height: calc(100vh - 5rem);
   display: flex !important;
   justify-content: center;
   align-items: center;
