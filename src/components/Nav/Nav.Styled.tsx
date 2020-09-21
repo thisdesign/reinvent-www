@@ -8,6 +8,10 @@ const Wrapper = styled.nav`
   top: 0;
   background: white;
   z-index: ${zIndex.nav};
+
+  svg {
+    height: 1.2rem;
+  }
 `;
 
 const Inner = styled.div`
@@ -66,7 +70,6 @@ const Hamburger = styled.div<{ open: boolean }>`
 const Link = styled.a<{ active: boolean }>`
   display: inline-block;
   margin-left: ${size[1]};
-  font-size: ${size[-1]};
   border-bottom: ${(p) => (p.active ? ` 1px solid ${colors.blue}` : "none")};
   cursor: pointer;
 `;

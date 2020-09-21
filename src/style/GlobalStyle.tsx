@@ -41,13 +41,13 @@ const style = css`
       font-size: 20px;
     }
     @media ${mq.md} {
-      font-size: 21px;
+      font-size: 20px;
     }
     @media ${mq.lg} {
-      font-size: 22px;
+      font-size: 21px;
     }
     @media ${mq.xl} {
-      font-size: 23px;
+      font-size: 22px;
     }
   }
 

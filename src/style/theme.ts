@@ -68,7 +68,7 @@ export const size = {
   ..._scale,
   xs: ".25rem",
   sm: ".5rem",
-  navHeight: "3rem",
+  navHeight: "3.2rem",
   maxWidth: "1400px",
   standard: `var(--size-standard)`,
   standardY: `calc(var(--size-standard) * 1.72)`,
