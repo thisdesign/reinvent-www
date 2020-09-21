@@ -16,7 +16,7 @@ const Hero = styled.div`
   margin: 0 auto;
 
   .slick-dots {
-    bottom: 10px;
+    bottom: 30px;
 
     li,
     button {

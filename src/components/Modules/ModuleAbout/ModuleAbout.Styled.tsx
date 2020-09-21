@@ -9,10 +9,10 @@ const About = styled.div`
   background: ${colors.ltGrey};
 
   h3 {
-    text-align: center;
     margin-bottom: ${size[0]};
     max-width: 30em;
     color: ${colors.grey};
+    line-height: ${size[2]};
 
     @media ${mq.sm} {
       font-size: ${size[1]};
