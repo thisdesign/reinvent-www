@@ -1,4 +1,4 @@
-import { IntroHead, PureBlockContent } from "components";
+import { PureBlockContent } from "components";
 
 import React from "react";
 import { ModuleAbout as ModuleAboutType } from "types";
