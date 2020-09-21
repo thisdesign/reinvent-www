@@ -1,18 +1,22 @@
 import styled from "styled-components";
-import { size } from "style";
+import { colors, size } from "style";
+import mq from "style/mq";
 
 const About = styled.div`
   display: flex;
-  max-width: ${size.maxWidth};
-  margin: ${size.standardY} auto;
+  padding: ${size.standardY} ${size.standard};
   justify-content: center;
-  padding: 0 ${size.standard};
+  background: ${colors.ltGrey};
 
   h3 {
-    font-size: ${size[1]};
     text-align: center;
     margin-bottom: ${size[0]};
     max-width: 30em;
+    color: ${colors.grey};
+
+    @media ${mq.sm} {
+      font-size: ${size[1]};
+    }
   }
 `;
 

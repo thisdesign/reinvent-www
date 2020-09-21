@@ -3,7 +3,7 @@ import styled from "styled-components";
 import mq from "style/mq";
 
 const Statement = styled.div`
-  min-height: calc(100vh - 5rem);
+  min-height: calc(100vh - ${size.navHeight});
   display: flex !important;
   justify-content: center;
   align-items: center;
@@ -16,6 +16,8 @@ const Hero = styled.div`
   margin: 0 auto;
 
   .slick-dots {
+    bottom: 10px;
+
     li,
     button {
       margin: 0;

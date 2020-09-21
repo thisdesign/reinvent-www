@@ -71,7 +71,7 @@ export const size = {
   navHeight: "3rem",
   maxWidth: "1400px",
   standard: `var(--size-standard)`,
-  standardY: `calc(var(--size-standard) * 1.44)`,
+  standardY: `calc(var(--size-standard) * 1.72)`,
 };
 
 export const zIndex = {
