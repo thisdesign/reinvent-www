@@ -21,17 +21,6 @@ export const LargeHead = styled.h1`
   }
 `;
 
-export const MediumHead = styled.h3`
-  ${SHARED_PROPS};
-  font-size: ${size[3]};
-  line-height: 1.1;
-  max-width: 10em;
-
-  @media ${mq.sm} {
-    font-size: ${size[4]};
-  }
-`;
-
 export const IntroHead = styled.h2<HeadingProps>`
   ${SHARED_PROPS};
   font-size: ${size[2]};

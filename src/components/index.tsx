@@ -1,10 +1,5 @@
 import Layout from "./Layout/Layout";
-import {
-  LargeHead,
-  MediumHead,
-  IntroHead,
-  HomepageHeroText,
-} from "./Type/Type";
+import { LargeHead, IntroHead, HomepageHeroText } from "./Type/Type";
 import Nav from "./Nav/Nav";
 import ArrowDown, { ArrowRight, ArrowLeft } from "./ArrowDown/ArrowDown";
 import SanityBlockContent from "./SanityBlockContent/SanityBlockContent";
@@ -39,7 +34,6 @@ export {
   Footer,
   AnchorButton,
   Anchor,
-  MediumHead,
   Logo,
   SanityBlockContent,
   ModuleTeamMembers,

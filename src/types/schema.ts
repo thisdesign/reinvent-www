@@ -89,11 +89,7 @@ export type ModuleCompanies = {
 export type ModuleAbout = {
   _key: string;
   _type: "moduleAbout";
-  featuredImage?: SanityImage;
-  name?: string;
-  signature?: SanityImage;
   statement?: SanityBlockContent;
-  title?: string;
 };
 
 export type ModuleIntro = {
