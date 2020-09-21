@@ -31,6 +31,7 @@ export const IntroHead = styled.h2<HeadingProps>`
 export const HomepageHeroText = styled.h1<HeadingProps>`
   ${SHARED_PROPS};
 
+  font-family: ${fontFamilies.display};
   font-size: ${size[3]};
   line-height: 1;
 
