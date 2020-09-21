@@ -16,10 +16,15 @@ export default {
               type: "string",
               validation: (Rule) => Rule.required(),
             },
+            // {
+            //   name: "statement",
+            //   type: "string",
+            //   validation: (Rule) => Rule.required(),
+            // },
             {
-              name: "statement",
-              type: "string",
-              validation: (Rule) => Rule.required(),
+              name: "href",
+              type: "url",
+              title: "URL",
             },
             {
               type: "image",

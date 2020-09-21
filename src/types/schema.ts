@@ -16,14 +16,6 @@ export type TeamMember = {
   name: string;
 };
 
-export type CompaniesSchema = {
-  logos: {
-    _key: string;
-    image: SanityImage;
-    name: string;
-  }[];
-} & HeadingPair;
-
 export type ContactSchema = {
   backgroundImage: SanityImage;
   ctaText: string;
@@ -40,7 +32,6 @@ export type SiteSchema = {
   url: string;
   intro: string;
   contactEmail: string;
-  companies: CompaniesSchema;
   contact: ContactSchema;
   slug: SanitySlug;
   imageBreak: SanityImage;
@@ -82,7 +73,7 @@ export type ModuleCompanies = {
     _key: string;
     image: SanityImage;
     name: string;
-    statement?: string;
+    href: string;
   }[];
 };
 

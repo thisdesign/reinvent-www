@@ -8,19 +8,6 @@ const Wrapper = styled.div`
 
 const ANIM_TIME = "300ms";
 
-const Statement = styled.div`
-  padding: ${size[0]};
-  font-size: ${size[-1]};
-  text-align: center;
-  color: white;
-  opacity: 0;
-  transition: ${ANIM_TIME} transform ${ease.standard},
-    ${ANIM_TIME} opacity ${ease.standard};
-  @media ${mq.md} {
-    transform: translateY(-4.5rem);
-  }
-`;
-
 const ImgWrap = styled.ul`
   display: flex;
   justify-content: center;
@@ -42,34 +29,24 @@ const ImgWrap = styled.ul`
     }
 
     img {
-      opacity: 0.7;
       transition: filter ${ANIM_TIME} ${ease.standard},
-        opacity ${ANIM_TIME} ${ease.standard},
         transform ${ANIM_TIME} ${ease.standard};
-      transform: translateY(${size[0]});
+      transform: translateY(${size.xs});
+      display: block;
     }
 
     &:hover {
       background: ${colors.blue};
 
       img {
-        filter: invert(1);
-        opacity: 1;
+        filter: brightness(0) invert(1);
         transform: translateY(0);
-      }
-
-      ${Statement} {
-        @media ${mq.md} {
-          transform: translateY(-4rem);
-        }
-        opacity: 1;
       }
     }
   }
 `;
 
 export default {
-  Statement,
   ImgWrap,
   Wrapper,
 };
