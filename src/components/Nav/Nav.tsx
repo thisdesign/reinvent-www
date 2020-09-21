@@ -7,11 +7,17 @@ import Link from "next/link";
 const Nav: React.FC<{ slug: string }> = ({ slug }) => {
   const { site } = useGlobalData();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isAbout, setAbout] = useState(false);
 
   const links = (
     <>
       <Link href="/#about">
-        <S.Link active={slug === "about"}>About</S.Link>
+        <S.Link
+          onClick={() => setAbout(true)}
+          active={isAbout && slug === "about"}
+        >
+          About
+        </S.Link>
       </Link>
 
       {site.primaryNav.map((navItem) => (
@@ -32,7 +38,7 @@ const Nav: React.FC<{ slug: string }> = ({ slug }) => {
     <S.Wrapper>
       <S.Inner>
         <Link href="/">
-          <a>
+          <a onClick={() => setAbout(false)}>
             <Logo />
           </a>
         </Link>
