@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import { Fragment } from "react";
 import BlockContentToReact from "@sanity/block-content-to-react";
 import { SanityBlockContent } from "types";
@@ -11,9 +12,7 @@ const PureBlockContent: React.FC<{
     serializers={{
       types: {
         block: (props) => {
-          if (props.node.style === "normal") {
-            return <Component>{props.children}</Component>;
-          }
+          return <Component>{props.children}</Component>;
         },
       },
     }}
