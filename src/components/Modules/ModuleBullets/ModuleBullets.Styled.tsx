@@ -4,8 +4,12 @@ import mq from "style/mq";
 import styled from "styled-components";
 
 const Bullet = styled.div`
-  background: ${colors.ltGrey};
+  background: ${colors.ltBlue};
   margin-top: ${size.sm};
+
+  p {
+    color: ${colors.charcoal};
+  }
 `;
 
 const BulletInner = styled.div`

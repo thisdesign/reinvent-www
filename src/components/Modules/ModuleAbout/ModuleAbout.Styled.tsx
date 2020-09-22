@@ -6,12 +6,12 @@ const About = styled.div`
   display: flex;
   padding: ${size.standardY} ${size.standard};
   justify-content: center;
-  background: ${colors.ltGrey};
+  background: ${colors.ltBlue};
 
   h3 {
     margin-bottom: ${size[0]};
     max-width: 30em;
-    color: ${colors.grey};
+    color: ${colors.white};
     line-height: ${size[2]};
 
     @media ${mq.sm} {

@@ -3,8 +3,8 @@ import { size } from "style";
 
 const Intro = styled.div`
   max-width: ${size.maxWidth};
-  padding: ${size[7]} ${size.standard};
-  margin: 0 auto;
+  margin: ${size.standardY} auto;
+  padding: 0 ${size.standard};
 `;
 
 export default {

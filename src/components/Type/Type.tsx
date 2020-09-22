@@ -25,7 +25,7 @@ export const IntroHead = styled.h2<HeadingProps>`
   ${SHARED_PROPS};
   font-size: ${size[2]};
   font-weight: 400;
-  max-width: 20em;
+  max-width: 30em;
 `;
 
 export const HomepageHeroText = styled.h1<HeadingProps>`

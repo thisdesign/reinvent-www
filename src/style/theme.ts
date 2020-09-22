@@ -36,7 +36,7 @@ export const colors = {
   grey: "grey",
 
   /** Almost White */
-  ltGrey: "#F7F7F7",
+  ltBlue: "#a9d9f9",
 };
 
 export const ease = {
