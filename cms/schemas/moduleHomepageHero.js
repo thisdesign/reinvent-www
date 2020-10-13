@@ -15,10 +15,15 @@ export default {
               type: "richTextStandard",
               name: "text",
             },
+            {
+              type: "image",
+              name: "background",
+            },
           ],
           preview: {
             select: {
               title: "text",
+              media: "background",
             },
           },
         },

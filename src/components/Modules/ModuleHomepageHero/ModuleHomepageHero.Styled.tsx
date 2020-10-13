@@ -2,12 +2,16 @@ import { colors, size } from "style";
 import styled from "styled-components";
 import mq from "style/mq";
 
-const Statement = styled.div`
+const Statement = styled.div<{ background: string | null }>`
   min-height: calc(100vh - ${size.navHeight});
   display: flex !important;
   justify-content: center;
   align-items: center;
   padding: ${size.standardY} ${size.standard};
+  background-image: url(${(p) => p.background});
+  background-size: cover;
+  background-position: center;
+  color: white;
 `;
 
 const Hero = styled.div`
@@ -25,8 +29,8 @@ const Hero = styled.div`
 
     button {
       &::before {
-        color: ${colors.grey};
-        opacity: 1;
+        color: ${colors.white};
+        opacity: 0.4;
         font-size: 8px;
       }
     }
@@ -34,7 +38,7 @@ const Hero = styled.div`
       button {
         &::before {
           opacity: 1;
-          color: ${colors.blue};
+          color: ${colors.white};
         }
       }
     }
@@ -48,7 +52,7 @@ const Hero = styled.div`
     display: none;
 
     g {
-      stroke: ${colors.blue};
+      stroke: ${colors.white};
     }
 
     &.right {

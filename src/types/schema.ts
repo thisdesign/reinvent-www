@@ -104,10 +104,11 @@ export type ModuleBullets = {
 export type ModuleHomepageHero = {
   _key: string;
   _type: "homepageHero";
-  content: {
+  content?: {
     _key: string;
     _type: "bullet";
-    text: SanityBlockContent;
+    text?: SanityBlockContent;
+    background?: SanityImage;
   }[];
 };
 

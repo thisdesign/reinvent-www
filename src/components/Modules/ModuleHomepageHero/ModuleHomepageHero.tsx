@@ -8,6 +8,7 @@ import React from "react";
 import { ModuleHomepageHero as ModuleHomepageHeroType } from "types";
 import Slider from "react-slick";
 import S from "./ModuleHomepageHero.Styled";
+import { urlFor } from "lib/sanity";
 
 type ArrowProps = {
   className: string;
@@ -15,11 +16,11 @@ type ArrowProps = {
   onClick: () => void;
 };
 
-const NextArrow = (props) => {
+const NextArrow = (props: any) => {
   const { onClick } = props as ArrowProps;
   return <ArrowRight onClick={onClick} className="arrow right" />;
 };
-const PreviousArrow = (props) => {
+const PreviousArrow = (props: any) => {
   const { onClick } = props as ArrowProps;
   return <ArrowLeft onClick={onClick} className="arrow left" />;
 };
@@ -37,13 +38,21 @@ const ModuleHomepageHero: React.FC<{ data: ModuleHomepageHeroType }> = ({
         nextArrow={<NextArrow />}
         prevArrow={<PreviousArrow />}
       >
-        {data.content.map((statement) => (
-          <S.Statement key={statement._key}>
-            <HomepageHeroText center>
-              <PureBlockContent blocks={statement.text} />
-            </HomepageHeroText>
-          </S.Statement>
-        ))}
+        {data.content?.map(
+          (statement) =>
+            statement.text && (
+              <S.Statement
+                key={statement._key}
+                background={
+                  urlFor(statement.background).width(2400).url() || null
+                }
+              >
+                <HomepageHeroText center>
+                  <PureBlockContent blocks={statement.text} />
+                </HomepageHeroText>
+              </S.Statement>
+            )
+        )}
       </Slider>
     </S.Hero>
   );
