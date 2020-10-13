@@ -32,7 +32,6 @@ const Statement = styled.div<{ isActive: boolean }>`
 
 const Hero = styled.div`
   display: relative;
-  max-width: ${size.maxWidth};
   margin: 0 auto;
 
   .slick-dots {
