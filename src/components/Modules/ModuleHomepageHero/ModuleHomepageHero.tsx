@@ -33,7 +33,7 @@ const ModuleHomepageHero: React.FC<{ data: ModuleHomepageHeroType }> = ({
   useEffect(() => setIndex(0), []);
 
   return (
-    <S.Hero backround={{}}>
+    <S.Hero>
       <Slider
         infinite={true}
         dots={true}

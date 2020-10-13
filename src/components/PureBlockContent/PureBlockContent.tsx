@@ -4,15 +4,15 @@ const BlockContentToReact = require("@sanity/block-content-to-react");
 import { SanityBlockContent } from "types";
 
 const PureBlockContent: React.FC<{
-  component?: React.FC | string;
+  component?: (children: any) => any;
   blocks: SanityBlockContent;
-}> = ({ blocks, component: Component = Fragment }) => (
+}> = ({ blocks, component }) => (
   <BlockContentToReact
     blocks={blocks}
     serializers={{
       types: {
         block: (props: any) => {
-          return <Component>{props.children}</Component>;
+          return component ? component(props.children) : <>{props.children}</>;
         },
       },
     }}
