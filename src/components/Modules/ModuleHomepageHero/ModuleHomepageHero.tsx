@@ -4,7 +4,7 @@ import {
   ArrowRight,
   ArrowLeft,
 } from "components";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ModuleHomepageHero as ModuleHomepageHeroType } from "types";
 import Slider from "react-slick";
 import S from "./ModuleHomepageHero.Styled";
@@ -29,6 +29,10 @@ const ModuleHomepageHero: React.FC<{ data: ModuleHomepageHeroType }> = ({
   data,
 }) => {
   const [index, setIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    setIndex(0);
+  }, []);
 
   return (
     <S.Hero>
