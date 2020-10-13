@@ -30,9 +30,7 @@ const ModuleHomepageHero: React.FC<{ data: ModuleHomepageHeroType }> = ({
 }) => {
   const [index, setIndex] = useState<number | null>(null);
 
-  useEffect(() => {
-    setIndex(0);
-  }, []);
+  useEffect(() => setIndex(0), []);
 
   return (
     <S.Hero>
