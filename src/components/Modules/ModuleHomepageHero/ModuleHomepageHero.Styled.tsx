@@ -2,6 +2,32 @@ import { colors, ease, size } from "style";
 import styled from "styled-components";
 import mq from "style/mq";
 
+const ImgWrapper = styled.div`
+  min-height: calc(100vh - ${size.navHeight});
+  position: relative;
+  overflow: hidden;
+`;
+
+export type Pos = "NEXT" | "PREV" | "CURRENT";
+
+const getTransform = (pos: Pos): string => {
+  if (pos === "PREV") return "-100%";
+  if (pos === "NEXT") return "100%";
+  return "0";
+};
+
+const Img = styled.img<{ pos: Pos }>`
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transform: ${(p) => `translateX(${getTransform(p.pos)})`};
+  transition: transform 500ms ${ease.standard};
+  /* transition: transform 15000ms cubic-bezier(0.4, 0.84, 0.42, 1); */
+`;
+
 const Statement = styled.div<{ isActive: boolean }>`
   min-height: calc(100vh - ${size.navHeight});
   display: flex !important;
@@ -9,16 +35,6 @@ const Statement = styled.div<{ isActive: boolean }>`
   align-items: center;
   padding: ${size.standardY} ${size.standard};
   color: white;
-  position: relative;
-  overflow: hidden;
-
-  img {
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-    transform: scale(${(p) => (p.isActive ? "1.2" : "1")});
-    transition: transform 15000ms cubic-bezier(0.4, 0.84, 0.42, 1);
-  }
 
   h1 {
     opacity: ${(p) => (p.isActive ? 1 : 0)};
@@ -86,4 +102,4 @@ const Hero = styled.div`
   }
 `;
 
-export default { Hero, Statement };
+export default { Img, ImgWrapper, Hero, Statement };
