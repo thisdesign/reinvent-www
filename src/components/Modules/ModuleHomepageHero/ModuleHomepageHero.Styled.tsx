@@ -15,15 +15,18 @@ const Statement = styled.div<{ isActive: boolean }>`
   img {
     position: absolute;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     z-index: -1;
     transform: scale(${(p) => (p.isActive ? "1.2" : "1")});
-    transition: transform 15000ms cubic-bezier(0.4, 0.84, 0.42, 1);
+    transition: transform 30s cubic-bezier(0.4, 0.84, 0.42, 1);
+    filter: brightness(0.75);
   }
 
   h1 {
     opacity: ${(p) => (p.isActive ? 1 : 0)};
     transform: scale(${(p) => (p.isActive ? 1 : 0.98)});
-    transition: 400ms ${ease.standard} all;
+    transition: 800ms ${ease.standard} all;
   }
 `;
 
