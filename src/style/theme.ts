@@ -27,7 +27,7 @@ export const fontFamilies = {
 export const colors = {
   black: "#000",
   white: "white",
-  blue: "#6BBDF3",
+  blue: "#04bdf5",
 
   /** Almost black */
   charcoal: "#353535",
