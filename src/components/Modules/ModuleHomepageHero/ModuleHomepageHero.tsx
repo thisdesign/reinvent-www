@@ -4,7 +4,7 @@ import {
   ArrowRight,
   ArrowLeft,
 } from "components";
-import React from "react";
+import React, { useState } from "react";
 import { ModuleHomepageHero as ModuleHomepageHeroType } from "types";
 import Slider from "react-slick";
 import S from "./ModuleHomepageHero.Styled";
@@ -28,6 +28,8 @@ const PreviousArrow = (props: any) => {
 const ModuleHomepageHero: React.FC<{ data: ModuleHomepageHeroType }> = ({
   data,
 }) => {
+  const [index, setIndex] = useState<number | null>(null);
+
   return (
     <S.Hero>
       <Slider
@@ -37,11 +39,12 @@ const ModuleHomepageHero: React.FC<{ data: ModuleHomepageHeroType }> = ({
         arrows={true}
         nextArrow={<NextArrow />}
         prevArrow={<PreviousArrow />}
+        afterChange={(i) => setIndex(i)}
       >
         {data.content?.map(
-          (statement) =>
+          (statement, i) =>
             statement.text && (
-              <S.Statement key={statement._key}>
+              <S.Statement key={statement._key} isActive={i === index}>
                 {statement?.background && (
                   <img
                     src={urlFor(statement.background).width(2400).url() || ""}

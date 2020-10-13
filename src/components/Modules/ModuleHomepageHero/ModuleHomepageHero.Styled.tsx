@@ -2,7 +2,7 @@ import { colors, size } from "style";
 import styled from "styled-components";
 import mq from "style/mq";
 
-const Statement = styled.div`
+const Statement = styled.div<{ isActive: boolean }>`
   min-height: calc(100vh - ${size.navHeight});
   display: flex !important;
   justify-content: center;
@@ -16,7 +16,8 @@ const Statement = styled.div`
     position: absolute;
     width: 100%;
     z-index: -1;
-    transform: scale(1);
+    transform: scale(${(p) => (p.isActive ? "1.2" : "1")});
+    transition: transform 15000ms cubic-bezier(0.4, 0.84, 0.42, 1);
   }
 `;
 
