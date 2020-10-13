@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { size, colors, fontFamilies } from "style";
 import mq from "style/mq";
 
-const Wrapper = styled.div<{ serif: boolean }>`
+const Wrapper = styled.div`
   max-width: 35rem;
   /**
    *

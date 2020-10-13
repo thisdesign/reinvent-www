@@ -7,7 +7,7 @@ const ModuleTextPage: React.FC<{ data: ModuleTextPageType }> = ({ data }) => {
   return (
     <S.Wrapper>
       <LargeHead>{data.title}</LargeHead>
-      <SanityBlockContent blocks={data.text} />
+      {data.text && <SanityBlockContent blocks={data.text} />}
     </S.Wrapper>
   );
 };

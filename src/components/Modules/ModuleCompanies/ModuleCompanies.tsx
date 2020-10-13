@@ -16,7 +16,7 @@ const Companies: React.FC<{ data: ModuleCompanies }> = ({ data }) => {
                 target="_blank"
               >
                 <img
-                  src={urlFor(company.image).width(600).url()}
+                  src={urlFor(company.image).width(600).url() || ""}
                   alt={company.name}
                 />
               </a>

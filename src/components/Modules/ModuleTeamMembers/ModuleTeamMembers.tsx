@@ -16,14 +16,16 @@ const TeamMembers: React.FC<{ data: ModuleTeam }> = ({ data }) => {
       <S.Grid as="ul">
         {data.members.map((member, i) => (
           <li key={member._key} onClick={() => setcurrentIndex(i)}>
-            <img src={urlFor(member.image).width(900).quality(60).url()} />
+            <img
+              src={urlFor(member.image).width(900).quality(60).url() || ""}
+            />
             <h4>{member.name}</h4>
             <S.JobTitle>{member.jobTitle}</S.JobTitle>
           </li>
         ))}
       </S.Grid>
       <MemberModal
-        key={currentIndex}
+        key={currentIndex || ""}
         closeModal={closeModal}
         members={data.members}
         currentIndex={currentIndex}
@@ -40,7 +42,9 @@ const MemberModal: React.FC<{
   setcurrentIndex: (index: number) => void;
 }> = ({ currentIndex, members, closeModal, setcurrentIndex }) => {
   useEffect(() => {
-    const targetEl = document.querySelector("#modal-outer");
+    const targetEl = (document.querySelector(
+      "#modal-outer"
+    ) as unknown) as Element;
 
     if (currentIndex === null) {
       clearAllBodyScrollLocks();
@@ -51,7 +55,7 @@ const MemberModal: React.FC<{
 
   // esc key listener
   useEffect(() => {
-    const handleKey = (e) => {
+    const handleKey = (e: any) => {
       if (e.keyCode === 27) {
         closeModal();
       }
@@ -75,7 +79,9 @@ const MemberModal: React.FC<{
         <div>
           <S.ProfileTitleWrap>
             <img
-              src={urlFor(currentMember.image).width(900).quality(60).url()}
+              src={
+                urlFor(currentMember.image).width(900).quality(60).url() || ""
+              }
             />
             <div>
               <p>{currentMember.name}</p>

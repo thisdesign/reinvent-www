@@ -11,11 +11,13 @@ const ModuleBullets: React.FC<{ data: ModuleBulletsType }> = ({ data }) => {
         <S.Bullet key={content._key}>
           <S.BulletInner>
             <S.ImagePane>
-              <img src={urlFor(content.icon).width(800).url()} />
+              {content.icon && (
+                <img src={urlFor(content.icon).width(800).url() || ""} />
+              )}
             </S.ImagePane>
             <S.TextPane>
               <LargeHead>{content.title}</LargeHead>
-              <SanityBlockContent serif blocks={content.text} />
+              <SanityBlockContent blocks={content.text} />
             </S.TextPane>
           </S.BulletInner>
         </S.Bullet>

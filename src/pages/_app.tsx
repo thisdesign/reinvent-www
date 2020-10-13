@@ -12,7 +12,7 @@ export const AppCtx = createContext<{ site: SiteSchema }>({
 
 // TODO: figure out 404s
 
-function MyApp({ Component, pageProps, site }) {
+function MyApp({ Component, pageProps, site }: any) {
   return (
     <AppCtx.Provider value={{ site }}>
       {/* TODO: move this to layout component */}

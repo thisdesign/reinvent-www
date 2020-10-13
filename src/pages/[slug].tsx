@@ -31,7 +31,7 @@ const PageTemplate: NextPage<{ data: PageSchema; slug: string }> = ({
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const slug = ctx.params.slug.toString();
+  const slug = ctx.params?.slug?.toString();
   const data = await client.fetch(
     `*[_type == 'page' && slug.current == $slug][0]`,
     { slug }

@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import { Fragment } from "react";
-import BlockContentToReact from "@sanity/block-content-to-react";
+const BlockContentToReact = require("@sanity/block-content-to-react");
 import { SanityBlockContent } from "types";
 
 const PureBlockContent: React.FC<{
@@ -11,7 +11,7 @@ const PureBlockContent: React.FC<{
     blocks={blocks}
     serializers={{
       types: {
-        block: (props) => {
+        block: (props: any) => {
           return <Component>{props.children}</Component>;
         },
       },
