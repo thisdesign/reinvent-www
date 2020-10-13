@@ -22,7 +22,8 @@ const Statement = styled.div<{ isActive: boolean }>`
 
   h1 {
     opacity: ${(p) => (p.isActive ? 1 : 0)};
-    transition: 400ms ${ease.standard};
+    transform: scale(${(p) => (p.isActive ? 1 : 0.98)});
+    transition: 400ms ${ease.standard} all;
   }
 `;
 

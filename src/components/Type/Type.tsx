@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { fontFamilies, size } from "style";
+import { size } from "style";
 import mq from "style/mq";
 
 type HeadingProps = {
@@ -32,18 +32,16 @@ export const HomepageHeroText = styled.h1<HeadingProps>`
   ${SHARED_PROPS};
   font-size: ${size[3]};
   line-height: 1;
+  max-width: 18em;
 
   em {
     font-weight: 300;
   }
 
-  @media ${mq.sm} {
+  @media ${mq.md} {
     font-size: ${size[4]};
   }
-  @media ${mq.md} {
-    font-size: ${size[5]};
-  }
   @media ${mq.lg} {
-    font-size: ${size[6]};
+    font-size: ${size[4]};
   }
 `;
