@@ -1,4 +1,4 @@
-import { colors, size } from "style";
+import { colors, ease, size } from "style";
 import styled from "styled-components";
 import mq from "style/mq";
 
@@ -18,6 +18,11 @@ const Statement = styled.div<{ isActive: boolean }>`
     z-index: -1;
     transform: scale(${(p) => (p.isActive ? "1.2" : "1")});
     transition: transform 15000ms cubic-bezier(0.4, 0.84, 0.42, 1);
+  }
+
+  h1 {
+    opacity: ${(p) => (p.isActive ? 1 : 0)};
+    transition: 400ms ${ease.standard};
   }
 `;
 

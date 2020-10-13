@@ -40,7 +40,7 @@ export const colors = {
 };
 
 export const ease = {
-  standard: `cubic-bezier(.39,.575,.565,1)`,
+  standard: `cubic-bezier(.72,.24,.37,.99)`,
 };
 
 const _scale = {
