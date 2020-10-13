@@ -2,16 +2,22 @@ import { colors, size } from "style";
 import styled from "styled-components";
 import mq from "style/mq";
 
-const Statement = styled.div<{ background: string | null }>`
+const Statement = styled.div`
   min-height: calc(100vh - ${size.navHeight});
   display: flex !important;
   justify-content: center;
   align-items: center;
   padding: ${size.standardY} ${size.standard};
-  background-image: url(${(p) => p.background});
-  background-size: cover;
-  background-position: center;
   color: white;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    transform: scale(1);
+  }
 `;
 
 const Hero = styled.div`

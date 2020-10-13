@@ -41,12 +41,12 @@ const ModuleHomepageHero: React.FC<{ data: ModuleHomepageHeroType }> = ({
         {data.content?.map(
           (statement) =>
             statement.text && (
-              <S.Statement
-                key={statement._key}
-                background={
-                  urlFor(statement.background).width(2400).url() || null
-                }
-              >
+              <S.Statement key={statement._key}>
+                {statement?.background && (
+                  <img
+                    src={urlFor(statement.background).width(2400).url() || ""}
+                  />
+                )}
                 <HomepageHeroText center>
                   <PureBlockContent blocks={statement.text} />
                 </HomepageHeroText>
