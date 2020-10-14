@@ -18,6 +18,9 @@ export default {
             {
               type: "image",
               name: "background",
+              options: {
+                hotspot: true,
+              },
             },
           ],
           preview: {
