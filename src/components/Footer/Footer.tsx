@@ -28,11 +28,6 @@ const Footer: React.FC<{ data: SiteSchema }> = ({ data }) => {
                 <div>{data.contactEmail}</div>
               </div>
               <ul>
-                <li>
-                  <Link href="/#about">
-                    <a>About</a>
-                  </Link>
-                </li>
                 {site.primaryNav.map((navItem) => (
                   <li key={navItem.title}>
                     <Link href="/[slug]" as={`/${navItem.slug.current}`}>
