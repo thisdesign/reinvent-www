@@ -19,10 +19,6 @@ export default {
               type: "richTextStandard",
               name: "text",
             },
-            {
-              type: "image",
-              name: "icon",
-            },
           ],
         },
       ],
