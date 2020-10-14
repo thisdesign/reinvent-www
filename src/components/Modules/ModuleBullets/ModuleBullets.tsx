@@ -1,5 +1,4 @@
 import { SanityBlockContent, LargeHead } from "components";
-import { urlFor } from "lib/sanity";
 import React from "react";
 import { ModuleBullets as ModuleBulletsType } from "types";
 import S from "./ModuleBullets.Styled";
