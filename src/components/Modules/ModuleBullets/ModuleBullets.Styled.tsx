@@ -18,7 +18,8 @@ const BulletInner = styled.div`
   padding: ${size.standardY} ${size.standard};
 
   @media ${mq.sm} {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 `;
 
@@ -30,12 +31,11 @@ const TextPane = styled.div`
   }
 `;
 
-const ImagePane = styled.div`
+const LeftPane = styled.div`
   flex: 1;
 
-  img {
-    width: 4rem;
-    margin-bottom: ${size[0]};
+  h3 {
+    max-width: 12em;
   }
 `;
 
@@ -43,5 +43,5 @@ export default {
   Bullet,
   BulletInner,
   TextPane,
-  ImagePane,
+  LeftPane,
 };

@@ -92,12 +92,11 @@ export type ModuleIntro = {
 export type ModuleBullets = {
   _key: string;
   _type: "bullets";
-  content: {
+  content?: {
     _key: string;
-    _type: "bullet";
-    icon: SanityImage;
-    text: SanityBlockContent[];
-    title: string;
+    _type?: "bullet";
+    text?: SanityBlockContent[];
+    title?: string;
   }[];
 };
 
