@@ -5,17 +5,20 @@ import { PureBlockContent } from "components";
 import { IntroHead } from "components/Type/Type";
 
 const ModuleIntro: React.FC<{ data: ModuleIntroType }> = ({ data }) => {
+  const isCentered = data.alignment === "left" ? false : true;
   return (
     <S.Intro>
-      <IntroHead center>
-        <PureBlockContent
-          blocks={data.text}
-          component={(children) => (
-            <IntroHead center margin-bottom>
-              {children}
-            </IntroHead>
-          )}
-        />
+      <IntroHead center={isCentered}>
+        {data.text && (
+          <PureBlockContent
+            blocks={data.text}
+            component={(children) => (
+              <IntroHead center={isCentered} margin-bottom>
+                {children}
+              </IntroHead>
+            )}
+          />
+        )}
       </IntroHead>
     </S.Intro>
   );

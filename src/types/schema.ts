@@ -86,7 +86,8 @@ export type ModuleAbout = {
 export type ModuleIntro = {
   _key: string;
   _type: "intro";
-  text: SanityBlockContent;
+  text?: SanityBlockContent;
+  alignment?: "left" | "center";
 };
 
 export type ModuleBullets = {

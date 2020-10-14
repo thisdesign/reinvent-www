@@ -7,6 +7,14 @@ export default {
       name: "text",
       type: "richTextStandard",
     },
+    {
+      title: "Text alignment",
+      name: "alignment",
+      type: "string",
+      options: {
+        list: ["left", "center"],
+      },
+    },
   ],
   preview: {
     select: {
