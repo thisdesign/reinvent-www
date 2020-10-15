@@ -32,6 +32,15 @@ const ModuleHomepageHero: React.FC<{ data: ModuleHomepageHeroType }> = ({
 
   useEffect(() => setIndex(0), []);
 
+  const resetVideos = () => {
+    const videoNodeList = document.querySelectorAll(".js-hero-video");
+    const videos = Array.from(videoNodeList) as HTMLVideoElement[];
+
+    videos.forEach((video) => {
+      video.currentTime = 0;
+    });
+  };
+
   return (
     <S.Hero>
       <Slider
@@ -42,6 +51,7 @@ const ModuleHomepageHero: React.FC<{ data: ModuleHomepageHeroType }> = ({
         nextArrow={<NextArrow />}
         prevArrow={<PreviousArrow />}
         afterChange={(i) => setIndex(i)}
+        beforeChange={() => resetVideos()}
       >
         {data.content?.map((statement, i) => {
           return (
@@ -49,6 +59,7 @@ const ModuleHomepageHero: React.FC<{ data: ModuleHomepageHeroType }> = ({
               <S.Statement key={statement._key} isActive={i === index}>
                 {statement.video ? (
                   <video
+                    className="js-hero-video"
                     autoPlay
                     muted
                     loop

@@ -20,7 +20,8 @@ const Statement = styled.div<{ isActive: boolean }>`
     object-fit: cover;
     z-index: -1;
     transform: scale(${(p) => (p.isActive ? "1.2" : "1")});
-    transition: transform 30s cubic-bezier(0.4, 0.84, 0.42, 1);
+    transition: transform ${(p) => (p.isActive ? "30s" : "0")}
+      cubic-bezier(0.4, 0.84, 0.42, 1);
     filter: brightness(0.55);
   }
 
