@@ -12,7 +12,8 @@ const Statement = styled.div<{ isActive: boolean }>`
   position: relative;
   overflow: hidden;
 
-  img {
+  img,
+  video {
     position: absolute;
     width: 100%;
     height: 100%;

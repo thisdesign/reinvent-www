@@ -43,11 +43,19 @@ const ModuleHomepageHero: React.FC<{ data: ModuleHomepageHeroType }> = ({
         prevArrow={<PreviousArrow />}
         afterChange={(i) => setIndex(i)}
       >
-        {data.content?.map(
-          (statement, i) =>
+        {data.content?.map((statement, i) => {
+          return (
             statement.text && (
               <S.Statement key={statement._key} isActive={i === index}>
-                {statement?.background && (
+                {statement.video ? (
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    src={statement.video}
+                  ></video>
+                ) : (
                   <img
                     src={urlFor(statement.background).width(2400).url() || ""}
                   />
@@ -57,7 +65,8 @@ const ModuleHomepageHero: React.FC<{ data: ModuleHomepageHeroType }> = ({
                 </HomepageHeroText>
               </S.Statement>
             )
-        )}
+          );
+        })}
       </Slider>
     </S.Hero>
   );

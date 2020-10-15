@@ -109,6 +109,7 @@ export type ModuleHomepageHero = {
     _type: "bullet";
     text?: SanityBlockContent;
     background?: SanityImage;
+    video?: string;
   }[];
 };
 

@@ -4,6 +4,7 @@ import React from "react";
 import { PageSchema } from "types";
 import Error from "next/error";
 import { Layout, Modules } from "components";
+import { getPage } from "lib/api";
 
 const PageTemplate: NextPage<{ data: PageSchema; slug: string }> = ({
   data,
@@ -32,10 +33,7 @@ const PageTemplate: NextPage<{ data: PageSchema; slug: string }> = ({
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const slug = ctx.params?.slug?.toString();
-  const data = await client.fetch(
-    `*[_type == 'page' && slug.current == $slug][0]`,
-    { slug }
-  );
+  const data = await getPage(slug || "");
 
   return { props: { data, slug } };
 };

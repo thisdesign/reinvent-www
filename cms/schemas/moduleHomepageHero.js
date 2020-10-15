@@ -22,6 +22,12 @@ export default {
                 hotspot: true,
               },
             },
+            {
+              type: "file",
+              name: "video",
+              title: "Video (Optional)",
+              description: "For load times, make sure video is under 10mb",
+            },
           ],
           preview: {
             select: {

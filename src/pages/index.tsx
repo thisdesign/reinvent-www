@@ -1,5 +1,5 @@
 import { Layout, Modules } from "components";
-import client from "lib/sanity";
+import { getPage } from "lib/api";
 import { GetStaticProps } from "next";
 import { PageSchema } from "types";
 
@@ -12,10 +12,7 @@ const Home: React.FC<{ data: PageSchema }> = ({ data }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await client.fetch(
-    `*[_type == 'page' && slug.current == $slug][0]`,
-    { slug: "home" }
-  );
+  const data = await getPage("home");
 
   return {
     props: { data },
