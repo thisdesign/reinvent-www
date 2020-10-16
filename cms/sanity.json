@@ -2,7 +2,7 @@
   "root": true,
   "api": {
     "projectId": "07nl0hko",
-    "dataset": "production"
+    "dataset": "2020-09"
   },
   "project": {
     "name": "Reinvent"

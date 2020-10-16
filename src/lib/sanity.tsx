@@ -2,7 +2,7 @@ import sanityClient from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 
 const options = {
-  dataset: "production",
+  dataset: "2020-09",
   projectId: "07nl0hko",
   useCdn: false,
 };

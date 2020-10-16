@@ -19,22 +19,31 @@ export const sizeVars = _sizes
  * Theme
  */
 
+export const fontFamilies = {
+  sansSerif: "BasisGrotesque, Helvetica, Arial, sans-serif",
+  display: "GTFlexa, Helvetica, Arial, sans-serif",
+};
+
 export const colors = {
   black: "#000",
   white: "white",
+  blue: "#04bdf5",
+
+  /** Almost black */
+  charcoal: "#353535",
+
+  /** Standard text */
   grey: "grey",
-  ltGrey: "#b9b9b9",
-  blue: "#6ABDF3",
-  ltBlue: "#8BD1FF",
+
+  /** Almost White */
+  ltBlue: "#a9d9f9",
 };
 
 export const ease = {
-  standard: `cubic-bezier(.39,.575,.565,1)`,
+  standard: `cubic-bezier(.47,.44,.37,.99)`,
 };
 
 const _scale = {
-  xs: ".25rem",
-  sm: ".5rem",
   "-2": _msVar(-2),
   "-1": _msVar(-1),
   "0": _msVar(0),
@@ -57,8 +66,12 @@ const _scale = {
 
 export const size = {
   ..._scale,
+  xs: ".25rem",
+  sm: ".5rem",
+  navHeight: "3.2rem",
+  maxWidth: "1400px",
   standard: `var(--size-standard)`,
-  standardY: `var(--ms4)`,
+  standardY: `calc(var(--size-standard) * 1.72)`,
 };
 
 export const zIndex = {

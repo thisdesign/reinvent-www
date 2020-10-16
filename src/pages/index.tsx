@@ -1,52 +1,21 @@
-import {
-  TextBlock,
-  Layout,
-  Hero,
-  Nav,
-  ImageBreak,
-  TeamMembers,
-  Anchor,
-  Companies,
-  Contact,
-  Footer,
-  Container,
-  Seo,
-} from "components";
-import { getSite } from "lib/api";
-import { SiteSchema } from "types";
+import { Layout, Modules } from "components";
+import { getPage } from "lib/api";
+import { GetStaticProps } from "next";
+import { PageSchema } from "types";
 
-const Home: React.FC<{ site: SiteSchema }> = ({ site }) => {
+const Home: React.FC<{ data: PageSchema }> = ({ data }) => {
   return (
-    <>
-      <Hero text={site.intro} />
-      <Nav />
-      <Container>
-        <Anchor id="companies" />
-        <Companies data={site.companies} />
-        <Anchor id="team" />
-        <TextBlock
-          center
-          eyebrow={site.team.eyebrow}
-          head={site.team.main}
-          support={site.team.support}
-        />
-        <TeamMembers members={site.team.members} />
-        <Anchor id="contact" />
-      </Container>
-      <Contact data={site.contact} emailAddress={site.contactEmail} />
-    </>
+    <Layout slug="home" title={null} route="/" image={null} description={null}>
+      <Modules data={data.modules || []} />
+    </Layout>
   );
 };
 
-export const getStaticProps = async () => {
-  const getDataFromCms = async () => {
-    const site = await getSite();
-    return { site };
-  };
+export const getStaticProps: GetStaticProps = async () => {
+  const data = await getPage("home");
 
   return {
-    props: await getDataFromCms(),
-    revalidate: 1,
+    props: { data },
   };
 };
 

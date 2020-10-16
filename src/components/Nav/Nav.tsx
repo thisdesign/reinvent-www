@@ -1,50 +1,71 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import S from "./Nav.Styled";
-import { ArrowDown, Logo } from "components";
+import { Logo } from "components";
+import { useGlobalData } from "hooks";
+import Link from "next/link";
 
-const Nav = () => {
-  const [isScrolled, setScrolled] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const checkPos = () => {
-      if (ref.current) {
-        const { y } = ref.current.getBoundingClientRect();
-        const state = y > 0;
+const Nav: React.FC<{ slug: string }> = ({ slug }) => {
+  const { site } = useGlobalData();
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-        setScrolled(!state);
-      }
-    };
-
-    checkPos();
-
-    document.addEventListener("scroll", checkPos);
-    return () => {
-      document.removeEventListener("scroll", checkPos);
-    };
-  }, []);
+  const links = (
+    <>
+      {site.primaryNav.map((navItem) => (
+        <Link
+          key={navItem.title}
+          href="/[slug]"
+          as={`/${navItem.slug.current}`}
+        >
+          <S.Link active={slug === navItem.slug.current}>
+            {navItem.title}
+          </S.Link>
+        </Link>
+      ))}
+    </>
+  );
 
   return (
-    <S.Wrapper ref={ref} active={isScrolled}>
-      <S.LogoWrap active={isScrolled}>
-        <ArrowDown />
-      </S.LogoWrap>
-      <S.LogoWrap active={!isScrolled}>
-        <Logo />
-      </S.LogoWrap>
-      <div></div>
-
-      <S.ItemWrap>
-        <li>
-          <a href="#companies">Companies</a>
-        </li>
-        <li>
-          <a href="#team">Our Team</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </S.ItemWrap>
+    <S.Wrapper>
+      <S.Inner>
+        <Link href="/">
+          <a>
+            <Logo />
+          </a>
+        </Link>
+        <S.Links>{links}</S.Links>
+        <S.Hamburger
+          onClick={() => setMobileMenuOpen(isMobileMenuOpen ? false : true)}
+          open={isMobileMenuOpen}
+        ></S.Hamburger>
+      </S.Inner>
+      {isMobileMenuOpen && (
+        <MobileMenu onClose={() => setMobileMenuOpen(false)}>
+          {links}
+        </MobileMenu>
+      )}
     </S.Wrapper>
+  );
+};
+
+const container = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const MobileMenu: React.FC<{ onClose: () => void }> = ({
+  children,
+  onClose,
+}) => {
+  return (
+    <S.MobileMenu variants={container} initial="hidden" animate="visible">
+      <S.MobileMenuContent onClick={onClose}>{children}</S.MobileMenuContent>
+    </S.MobileMenu>
   );
 };
 

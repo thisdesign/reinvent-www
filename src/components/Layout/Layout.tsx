@@ -1,16 +1,23 @@
-import React, { useEffect, useState } from "react";
+import Nav from "components/Nav/Nav";
+import Seo, { SeoProps } from "components/Seo/Seo";
+import React from "react";
 import GlobalStyle from "style/GlobalStyle";
 import S from "./Layout.Styled";
 
-const Layout: React.FC = ({ children }) => {
-  const [isMounted, setMount] = useState(false);
-  useEffect(() => {
-    setMount(true);
-  }, []);
+const Layout: React.FC<{ slug: string } & SeoProps> = ({
+  children,
+  slug,
+  title,
+  description,
+  route,
+  image,
+}) => {
   return (
-    <div className={isMounted ? "mounted" : ""}>
+    <div>
+      <Seo {...{ title, description, route, image }} />
       <GlobalStyle />
-      <main>{children}</main>
+      <Nav slug={slug} />
+      <S.Main>{children}</S.Main>
     </div>
   );
 };

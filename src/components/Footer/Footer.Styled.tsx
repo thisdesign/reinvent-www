@@ -19,37 +19,34 @@ const Wrapper = styled.div`
 
 const Inner = styled.div`
   padding: ${size.standardY} ${size.standard};
+
+  display: grid;
+  grid-gap: ${size[0]};
+
+  @media ${mq.sm} {
+    grid-template-columns: 2fr 3fr;
+  }
 `;
 
-const BottomWrap = styled.div`
+const Info = styled.div`
+  display: grid;
+  grid-gap: ${size[0]};
+
   @media ${mq.sm} {
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
   }
 
-  a {
-    color: ${colors.white};
+  li {
+    margin-bottom: ${size.xs};
   }
 
   ul {
-    display: flex;
-    margin-top: ${size[0]};
-
-    @media ${mq.sm} {
-      margin-top: 0;
-    }
-
-    li {
-      margin-right: ${size[0]};
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
+    margin-bottom: ${size[0]};
   }
 `;
+
 export default {
-  BottomWrap,
+  Info,
   Inner,
   Wrapper,
 };

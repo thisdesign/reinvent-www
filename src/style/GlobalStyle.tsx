@@ -1,5 +1,5 @@
 import { createGlobalStyle, css } from "styled-components";
-import { sizeVars, size, colors } from "style";
+import { sizeVars, size, colors, fontFamilies } from "style";
 import reset from "styled-reset";
 import mq from "style/mq";
 
@@ -29,9 +29,8 @@ const style = css`
 
   body,
   html {
-    scroll-behavior: smooth;
-    font-family: BasisGrotesque, Helvetica, Arial, sans-serif;
-    color: ${colors.black};
+    font-family: ${fontFamilies.sansSerif};
+    color: ${colors.charcoal};
     font-size: 18px;
     line-height: 1.1;
 
@@ -42,13 +41,13 @@ const style = css`
       font-size: 20px;
     }
     @media ${mq.md} {
-      font-size: 21px;
+      font-size: 20px;
     }
     @media ${mq.lg} {
-      font-size: 22px;
+      font-size: 21px;
     }
     @media ${mq.xl} {
-      font-size: 23px;
+      font-size: 22px;
     }
   }
 
@@ -61,6 +60,14 @@ const style = css`
   video {
     width: 100%;
     max-width: 100%;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: 500;
   }
 `;
 

@@ -3,36 +3,48 @@ import S from "./Footer.Styled";
 import { Container } from "components";
 import { SiteSchema } from "types";
 import Logo from "components/Logo/Logo";
+import { useGlobalData } from "hooks";
+import Link from "next/link";
 
 const Footer: React.FC<{ data: SiteSchema }> = ({ data }) => {
+  const { site } = useGlobalData();
   return (
     <S.Wrapper>
       <Container>
         <S.Inner>
           <Logo />
+
           <div>
-            &copy; {new Date().getFullYear()} {data.title}
+            <S.Info>
+              <div>
+                <ul>
+                  <li>
+                    <Link href="/[slug]" as={`/terms`}>
+                      <a>Terms of Service</a>
+                    </Link>
+                  </li>
+                </ul>
+                <div>For inquiries contact:</div>
+                <div>{data.contactEmail}</div>
+              </div>
+              <ul>
+                {site.primaryNav.map((navItem) => (
+                  <li key={navItem.title}>
+                    <Link href="/[slug]" as={`/${navItem.slug.current}`}>
+                      <a>{navItem.title}</a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </S.Info>
           </div>
-          <S.BottomWrap>
+          <div></div>
+          <div>
+            <div>Reinvent Capital is not open to new investors.</div>
             <div>
-              <div>Reinvent Capital is not open to new investors.</div>
-              <div>{data.contactEmail}</div>
+              &copy; {new Date().getFullYear()} {data.title}
             </div>
-            <ul>
-              <li>
-                <a href="#companies">Companies</a>
-              </li>
-              <li>
-                <a href="#team">Our Team</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
-              <li>
-                <a href="/terms">Terms</a>
-              </li>
-            </ul>
-          </S.BottomWrap>
+          </div>
         </S.Inner>
       </Container>
     </S.Wrapper>

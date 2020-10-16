@@ -1,23 +1,3 @@
-const headingPair = [
-  {
-    title: "Section Title",
-    name: "eyebrow",
-    type: "string",
-  },
-  {
-    name: "main",
-    type: "text",
-    rows: 2,
-    // validation: (Rule) => Rule.required(),
-  },
-  {
-    name: "support",
-    type: "text",
-    rows: 2,
-    // validation: (Rule) => Rule.required(),
-  },
-];
-
 export default {
   name: "site",
   title: "Site Settings",
@@ -50,122 +30,30 @@ export default {
     },
 
     {
-      name: "intro",
+      name: "previewImage",
+      type: "image",
+      description:
+        "Image that shows when shared on iMessage, twitter, slack, etc.",
+    },
+
+    {
+      name: "metaDescription",
       type: "text",
-      rows: 2,
-      validation: (Rule) => Rule.required(),
+      description:
+        "The meta description is a snippet of up to about 155 characters which summarizes a page's content for SEO purposes",
     },
 
     {
-      name: "introImage",
-      type: "image",
-      hidden: true,
-      validation: (Rule) => Rule.required(),
-      options: {
-        hotspot: true,
-      },
-    },
-
-    {
-      type: "object",
-      name: "companies",
-
-      fields: [
-        ...headingPair,
+      name: "primaryNav",
+      type: "array",
+      of: [
         {
-          name: "logos",
-          type: "array",
-          of: [
-            {
-              type: "object",
-              name: "company",
-              fields: [
-                {
-                  name: "name",
-                  type: "string",
-                  validation: (Rule) => Rule.required(),
-                },
-                {
-                  type: "image",
-                  name: "image",
-                  validation: (Rule) => Rule.required(),
-                },
-              ],
-            },
-          ],
+          type: "reference",
+          to: { type: "page" },
         },
       ],
     },
 
-    {
-      name: "imageBreak",
-      type: "image",
-      hidden: true,
-      validation: (Rule) => Rule.required(),
-    },
-
-    {
-      type: "object",
-      name: "team",
-      fields: [
-        ...headingPair,
-        {
-          name: "members",
-          type: "array",
-          of: [
-            {
-              type: "object",
-              name: "member",
-              fields: [
-                {
-                  type: "string",
-                  name: "name",
-                  validation: (Rule) => Rule.required(),
-                },
-                {
-                  name: "jobTitle",
-                  type: "string",
-                  validation: (Rule) => Rule.required(),
-                },
-                {
-                  type: "image",
-                  name: "image",
-                  validation: (Rule) => Rule.required(),
-                },
-                {
-                  name: "bio",
-                  type: "richTextStandard",
-                  validation: (Rule) => Rule.required(),
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-
-    {
-      type: "object",
-      name: "contact",
-      fields: [
-        ...headingPair,
-
-        {
-          name: "ctaText",
-          type: "string",
-          validation: (Rule) => Rule.required(),
-        },
-        {
-          name: "backgroundImage",
-          type: "image",
-          hidden: true,
-          validation: (Rule) => Rule.required(),
-          options: {
-            hotspot: true,
-          },
-        },
-      ],
-    },
     {
       name: "terms",
       title: "Terms of Service",
