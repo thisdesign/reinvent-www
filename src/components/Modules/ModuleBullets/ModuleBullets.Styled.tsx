@@ -26,19 +26,21 @@ const BulletInner = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row-reverse;
   }
 `;
 
-const TextPane = styled.div`
+const IconPane = styled.div`
   img {
     width: ${size[6]};
+    margin-bottom: ${size[2]};
   }
   ${LargeHead} {
     margin-bottom: ${size[2]};
   }
 `;
 
-const LeftPane = styled.div`
+const TextPane = styled.div`
   @media ${mq.sm} {
     width: 50%;
   }
@@ -48,4 +50,4 @@ const LeftPane = styled.div`
   }
 `;
 
-export default { Head, Bullet, BulletInner, TextPane, LeftPane };
+export default { Head, Bullet, BulletInner, IconPane, TextPane };

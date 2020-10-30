@@ -11,12 +11,12 @@ const ModuleBullets: React.FC<{ data: ModuleBulletsType }> = ({ data }) => {
       {data.content?.map((content) => (
         <S.Bullet key={content._key}>
           <S.BulletInner>
-            <S.LeftPane>
+            <S.IconPane>
+              <img src={urlFor(content.icon).url() || ""} />
+            </S.IconPane>
+            <S.TextPane>
               <LargeHead as="h3">{content.title}</LargeHead>
               {content.text && <SanityBlockContent blocks={content.text} />}
-            </S.LeftPane>
-            <S.TextPane>
-              <img src={urlFor(content.icon).url() || ""} />
             </S.TextPane>
           </S.BulletInner>
         </S.Bullet>
