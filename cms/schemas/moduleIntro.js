@@ -15,6 +15,16 @@ export default {
         list: ["left", "center"],
       },
     },
+    {
+      title: "Background Image (Optional)",
+      name: "image",
+      type: "image",
+    },
+    {
+      title: "Background Image Tint (Optional)",
+      name: "tint",
+      type: "number",
+    },
   ],
   preview: {
     select: {

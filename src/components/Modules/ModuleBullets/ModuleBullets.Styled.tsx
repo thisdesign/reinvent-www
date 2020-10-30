@@ -4,7 +4,7 @@ import mq from "style/mq";
 import styled from "styled-components";
 
 const Head = styled.div`
-  margin: ${size.standard} auto;
+  margin: ${size.standardY} auto;
   text-align: center;
 `;
 

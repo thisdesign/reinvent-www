@@ -88,6 +88,8 @@ export type ModuleIntro = {
   _type: "intro";
   text?: SanityBlockContent;
   alignment?: "left" | "center";
+  image?: SanityImage;
+  tint?: number;
 };
 
 export type ModuleBullets = {
