@@ -4,7 +4,6 @@ import mq from "style/mq";
 import styled from "styled-components";
 
 const Bullet = styled.div`
-  background: ${colors.ltBlue};
   margin-top: ${size.sm};
 
   p {
@@ -14,25 +13,28 @@ const Bullet = styled.div`
 
 const BulletInner = styled.div`
   max-width: ${size.maxWidth};
-  margin: 0 auto;
-  padding: ${size.standardY} ${size.standard};
+  margin: calc(${size.standardY} * 1.5) ${size.standard};
 
   @media ${mq.sm} {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 `;
 
 const TextPane = styled.div`
-  flex: 1;
-
+  img {
+    width: ${size[6]};
+  }
   ${LargeHead} {
     margin-bottom: ${size[2]};
   }
 `;
 
 const LeftPane = styled.div`
-  flex: 1;
+  @media ${mq.sm} {
+    width: 50%;
+  }
 
   h3 {
     max-width: 12em;

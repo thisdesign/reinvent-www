@@ -4,6 +4,10 @@ export default {
   title: "Bullets",
   fields: [
     {
+      name: "title",
+      type: "string",
+    },
+    {
       name: "content",
       type: "array",
       of: [
@@ -14,6 +18,10 @@ export default {
             {
               type: "string",
               name: "title",
+            },
+            {
+              type: "image",
+              name: "icon",
             },
             {
               type: "richTextStandard",

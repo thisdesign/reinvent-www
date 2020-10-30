@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { size } from "style";
+import { size, colors } from "style";
 import mq from "style/mq";
 
 type HeadingProps = {
@@ -15,6 +15,7 @@ const SHARED_PROPS = css<HeadingProps>`
 export const LargeHead = styled.h1`
   ${SHARED_PROPS};
   font-size: ${size[2]};
+  color: ${colors.blue};
 
   @media ${mq.sm} {
     font-size: ${size[3]};

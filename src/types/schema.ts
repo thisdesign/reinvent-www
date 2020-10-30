@@ -98,6 +98,7 @@ export type ModuleBullets = {
     _type?: "bullet";
     text?: SanityBlockContent[];
     title?: string;
+    icon?: SanityImage;
   }[];
 };
 
