@@ -7,6 +7,7 @@ import S from "./ModuleBullets.Styled";
 const ModuleBullets: React.FC<{ data: ModuleBulletsType }> = ({ data }) => {
   return (
     <div>
+      {data.title && <S.Head>{data.title}</S.Head>}
       {data.content?.map((content) => (
         <S.Bullet key={content._key}>
           <S.BulletInner>
@@ -15,7 +16,6 @@ const ModuleBullets: React.FC<{ data: ModuleBulletsType }> = ({ data }) => {
               {content.text && <SanityBlockContent blocks={content.text} />}
             </S.LeftPane>
             <S.TextPane>
-              {console.log(content.icon)}
               <img src={urlFor(content.icon).url() || ""} />
             </S.TextPane>
           </S.BulletInner>

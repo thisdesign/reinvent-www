@@ -3,8 +3,15 @@ import { size, colors } from "style";
 import mq from "style/mq";
 import styled from "styled-components";
 
+const Head = styled.div`
+  margin: ${size.standard} auto;
+  text-align: center;
+`;
+
 const Bullet = styled.div`
   margin-top: ${size.sm};
+  max-width: 48rem;
+  margin: 0 auto;
 
   p {
     color: ${colors.charcoal};
@@ -41,9 +48,4 @@ const LeftPane = styled.div`
   }
 `;
 
-export default {
-  Bullet,
-  BulletInner,
-  TextPane,
-  LeftPane,
-};
+export default { Head, Bullet, BulletInner, TextPane, LeftPane };

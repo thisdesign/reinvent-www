@@ -93,6 +93,7 @@ export type ModuleIntro = {
 export type ModuleBullets = {
   _key: string;
   _type: "bullets";
+  title?: string;
   content?: {
     _key: string;
     _type?: "bullet";
