@@ -10,7 +10,7 @@ const Wrapper = styled.nav`
   z-index: ${zIndex.nav};
 
   svg {
-    height: 1.2rem;
+    height: 1.5rem;
   }
 `;
 
