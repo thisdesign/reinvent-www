@@ -43,6 +43,7 @@ export type SiteSchema = {
   terms: SanityBlockContent;
   previewImage: SanityImage;
   metaDescription: string;
+  footerText: SanityBlockContent;
 };
 
 export type PageSchema = {

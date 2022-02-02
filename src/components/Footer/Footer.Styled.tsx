@@ -45,8 +45,21 @@ const Info = styled.div`
   }
 `;
 
+const BottomText = styled.div`
+  grid-column: span 2;
+`;
+
+const DisclaimerText = styled.div`
+  p {
+    color: white;
+    padding-top: 1rem;
+    font-size: 0.75rem;
+  }
+`;
 export default {
   Info,
   Inner,
   Wrapper,
+  BottomText,
+  DisclaimerText,
 };

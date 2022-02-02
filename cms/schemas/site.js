@@ -55,6 +55,11 @@ export default {
     },
 
     {
+      name: "footerText",
+      type: "richTextStandard",
+      description: "Adds text to the site's footer",
+    },
+    {
       name: "terms",
       title: "Terms of Service",
       type: "richTextStandard",
