@@ -1,19 +1,22 @@
-import React from "react";
-import S from "./Footer.Styled";
-import { Container, SanityBlockContent } from "components";
-import { SiteSchema } from "types";
-import Logo from "components/Logo/Logo";
-import { useGlobalData } from "hooks";
-import Link from "next/link";
+import React from 'react'
+import S from './Footer.Styled'
+import { Container, SanityBlockContent } from 'components'
+import { SiteSchema } from 'types'
+import Logo from 'components/Logo/Logo'
+import { useGlobalData } from 'hooks'
+import Link from 'next/link'
 
 const Footer: React.FC<{ data: SiteSchema }> = ({ data }) => {
-  const { site } = useGlobalData();
+  const { site } = useGlobalData()
 
   return (
     <S.Wrapper>
       <Container>
         <S.Inner>
+          {/* <S.LogoWrap> */}
+
           <Logo />
+          {/* </S.LogoWrap> */}
 
           <div>
             <S.Info>
@@ -52,7 +55,7 @@ const Footer: React.FC<{ data: SiteSchema }> = ({ data }) => {
         </S.Inner>
       </Container>
     </S.Wrapper>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

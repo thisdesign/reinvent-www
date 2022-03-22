@@ -8,6 +8,12 @@ import Anchor from "./Anchor/Anchor";
 import AnchorButton from "./AnchorButton/AnchorButton";
 import Footer from "./Footer/Footer";
 import Container from "./Container/Container";
+
+
+
+
+
+
 import Seo from "./Seo/Seo";
 import Terms from "./Terms/Terms";
 import Modules from "./Modules/Modules";

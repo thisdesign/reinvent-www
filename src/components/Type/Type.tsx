@@ -6,6 +6,9 @@ type HeadingProps = {
   center?: boolean;
 };
 
+
+
+
 const SHARED_PROPS = css<HeadingProps>`
   margin: ${(p) => p.center && "0 auto"};
   text-align: ${(p) => (p.center ? "center" : "left")};

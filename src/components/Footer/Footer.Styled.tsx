@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { colors, size } from "style";
-import mq from "style/mq";
+import styled from 'styled-components'
+import { colors, size } from 'style'
+import mq from 'style/mq'
 
 const Wrapper = styled.div`
   background: ${colors.blue};
@@ -11,11 +11,17 @@ const Wrapper = styled.div`
     display: block;
     margin-bottom: ${size[8]};
 
+    grid-column: span 2;
+
+    @media ${mq.sm} {
+      grid-column: span 1;
+    }
+
     * {
       fill: ${colors.white};
     }
   }
-`;
+`
 
 const Inner = styled.div`
   padding: ${size.standardY} ${size.standard};
@@ -26,7 +32,7 @@ const Inner = styled.div`
   @media ${mq.sm} {
     grid-template-columns: 2fr 3fr;
   }
-`;
+`
 
 const Info = styled.div`
   display: grid;
@@ -43,11 +49,11 @@ const Info = styled.div`
   ul {
     margin-bottom: ${size[0]};
   }
-`;
+`
 
 const BottomText = styled.div`
   grid-column: span 2;
-`;
+`
 
 const DisclaimerText = styled.div`
   p {
@@ -55,11 +61,11 @@ const DisclaimerText = styled.div`
     padding-top: 1rem;
     font-size: 0.75rem;
   }
-`;
+`
 export default {
   Info,
   Inner,
   Wrapper,
   BottomText,
   DisclaimerText,
-};
+}
